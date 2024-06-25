@@ -10,7 +10,6 @@ const Button = ({ children, type, label, btnType, color, loading, loadingText, e
         classes += `bg-[#F4F2F0] text-black focus:bg-[#F4F2F0]  `
     }
 
-
     return (
         <>
             {(<button type={type} disabled={disabled} className={classes} onClick={event}>

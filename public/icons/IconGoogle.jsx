@@ -1,4 +1,4 @@
-const GoogleIcon = () => {
+const IconGoogle = () => {
     return (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4"  id="google">
                 <path fill="#fbbb00" d="M113.47 309.408 95.648 375.94l-65.139 1.378C11.042 341.211 0 299.9 0 256c0-42.451 10.324-82.483 28.624-117.732h.014L86.63 148.9l25.404 57.644c-5.317 15.501-8.215 32.141-8.215 49.456.002 18.792 3.406 36.797 9.651 53.408z"></path>
@@ -9,4 +9,4 @@ const GoogleIcon = () => {
 
     )
 }
-export default GoogleIcon
+export default IconGoogle
