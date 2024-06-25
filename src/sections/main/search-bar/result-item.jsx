@@ -1,3 +1,4 @@
+import { products } from "@/assets/data/products";
 import ImageWrapper from "@/components/ui/image/image-wrapper";
 import Text from "@/components/ui/text/text";
 import Wrapper from "@/components/ui/wrapper/wrapper";
@@ -11,44 +12,7 @@ const ResultItem = ({ query }) => {
     "Omega Seedmaster",
     "Omega Speedmaster",
   ];
-  const products = [
-    {
-      title: "Omega Speedmaster",
-      referenceNumber: "1317.021",
-      price: "€ 1.699",
-      taxType: "Margin",
-      url: "/",
-      image:
-        "https://img.chrono24.com/images/uhren/34804920-u50m8ca4w9n6n4copc0fqt6i-ExtraLarge.jpg",
-    },
-    {
-      title: "Omega Speedmaster",
-      referenceNumber: "1317.021",
-      price: "€ 1.699",
-      taxType: "VAT",
-      url: "/",
-      image:
-        "https://img.chrono24.com/images/uhren/33998264-3coq4ig5eb6jhhqx3882dtl6-Square280.jpg",
-    },
-    {
-      title: "Omega Speedmaster",
-      referenceNumber: "1317.021",
-      price: "€ 1.699",
-      taxType: "Margin",
-      url: "/",
-      image:
-        "https://img.chrono24.com/images/uhren/31720707-shuvp12itktkue6hkkn43u07-Square280.jpg",
-    },
-    {
-      title: "Omega Speedmaster",
-      referenceNumber: "1317.021",
-      price: "€ 1.699",
-      taxType: "Margin",
-      url: "/",
-      image:
-        "https://img.chrono24.com/images/uhren/34366920-xkc4hlaxw8oc66ig477x68ao-Square280.jpg",
-    },
-  ];
+
   const itemsString = items.toString();
   return (
     <Wrapper

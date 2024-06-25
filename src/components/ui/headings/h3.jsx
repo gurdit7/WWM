@@ -6,7 +6,7 @@ const H3 = ({ as, children, className }) => {
       <h3
         className={
           (className || "") +
-          " text-[17px] font-bold leading-[28px] tracking-[-0.01em]"
+          " text-[20px] font-semibold leading-[26.44px] tracking-[-0.01em]"
         }
       >
         {children}
@@ -16,7 +16,7 @@ const H3 = ({ as, children, className }) => {
       <div
         className={
           (className || "") +
-          " text-[17px] font-bold leading-[28px] tracking-[-0.01em]"
+          " text-[20px] font-semibold leading-[26.44px] tracking-[-0.01em]"
         }
       >
         {children}

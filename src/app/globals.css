@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.flickity-enabled, .flickity-viewport{
+ @apply overflow-hidden !outline-none;
+}
+.featured-products .flickity-slider{
+    @apply space-x-[22px];
+}
