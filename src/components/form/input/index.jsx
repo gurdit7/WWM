@@ -26,7 +26,7 @@ const Input = ({
         />
         {label && (
           <label className={`block font-normal text-black text-[15px] antialiased absolute
-          leading-[22.5px] top-[18px] text-opacity-65 left-6 top-4
+          leading-[22.5px] top-[18px] text-opacity-65 left-6
           peer-focus:left-3
           peer-focus:top-[-9px] transition-all duration-300 peer-focus:text-xs peer-focus:leading-[18px] peer-focus:text-dark-100 peer-focus:text-opacity-50
           peer-focus:px-[6px] bg-white pointer-events-none`}>

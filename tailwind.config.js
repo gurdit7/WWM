@@ -15,7 +15,7 @@ module.exports = {
             100:"#151416"
           }
         }
+      }
     },
-  },
   plugins: [],
 };
