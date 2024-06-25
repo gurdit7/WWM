@@ -2,6 +2,7 @@ import H2 from "@/components/ui/headings/h2";
 import Text from "@/components/ui/text/text";
 import Wrapper from "@/components/ui/wrapper/wrapper";
 import Link from "next/link";
+import SearchBar from "../search-bar";
 
 const Search = () => {
   const searchTags = ["Rolex", "Gold", "34mm", "Europe", "Gold capped", "32mm"];
@@ -11,7 +12,9 @@ const Search = () => {
         <H2 className="text-white text-center" as={"tag"}>
           Find every watch, worldwide.
         </H2>
-
+        <Wrapper className="mt-6">
+        <SearchBar />
+        </Wrapper>
         <Wrapper className="mt-6 mb-1">
           <ul className="flex items-center gap-2 justify-center">
             {searchTags.map((item, i) => (
@@ -27,7 +30,7 @@ const Search = () => {
           </ul>
         </Wrapper>
         <Wrapper className='mt-6'>
-          <Text className='text-white'>
+          <Text className='text-white text-center'>
             <span className="opacity-75">Currently</span>
             <span className="border border-light-200 py-[2px] px-[6px] mx-2 rounded-[6px]">786.021</span>
             <span className="opacity-75"> watches online</span>
