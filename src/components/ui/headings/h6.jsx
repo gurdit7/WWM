@@ -1,12 +1,12 @@
 
 const H6 = ({ as, children, className }) => {
-  return (
+  return (    
     <>
     {as === "tag" && (
       <h6
         className={
           (className || "") +
-          " text-[17px] font-bold leading-[28px] tracking-[-0.01em]"
+          " text-[13px] font-normal leading-[18.2px]"
         }
       >
         {children}
@@ -16,7 +16,7 @@ const H6 = ({ as, children, className }) => {
       <div
         className={
           (className || "") +
-          " text-[27px] font-bold leading-[28px] tracking-[-0.01em]"
+" text-[13px] font-normal leading-[18.2px]"
         }
       >
         {children}
