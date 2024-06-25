@@ -1,8 +1,27 @@
-const H1 = () => {
+const H1 = ({ as, children, className }) => {
   return (
-    <div className="">
-      
-    </div>
+      <>
+        {as === "tag" && (
+          <h1
+            className={
+              (className || "") +
+              " text-[22px] font-bold leading-[29.08px] tracking-[-0.01em]"
+            }
+          >
+            {children}
+          </h1>
+        )}
+        {as !== "tag" && (
+          <div
+            className={
+              (className || "") +
+              " text-[22px] font-bold leading-[29.08px] tracking-[-0.01em] h2"
+            }
+          >
+            {children}
+          </div>
+        )}
+      </>
   )
 }
 
