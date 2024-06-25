@@ -1,8 +1,5 @@
 import Image from "next/image";
 
-
-
-
 const ImageWrapper = ({ image, alt, className}) => {
 
   return (
