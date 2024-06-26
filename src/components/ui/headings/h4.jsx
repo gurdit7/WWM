@@ -16,7 +16,7 @@ const H4 = ({ as, children, className }) => {
         <div
           className={
             (className || "") +
-            " text-[27px] font-bold leading-[28px] tracking-[-0.01em]"
+            " text-[17px] font-bold leading-[28px] tracking-[-0.01em]"
           }
         >
           {children}
