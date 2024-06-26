@@ -8,18 +8,20 @@ import IconChevronRight from "../../../../public/icons/IconChevronRight";
 import { featuredBrands } from "@/assets/data/brands";
 import IconRolex from "../../../../public/icons/IconRolex";
 import Text from "@/components/ui/text/text";
+import Link from "next/link";
 
 
 const BrandComponent = ({ brand }) => (
-    <div className="border border-[#F4F2F0] border-solid px-4 rounded-[10px]">
-        <div className="flex justify-center items-center py-[30px]">
+    <div className="border border-[#F4F2F0] border-solid rounded-[10px]">
+        <div className="flex justify-center items-center py-[30px] px-6">
             <IconRolex />
         </div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col pt-[6px] pb-3 px-3">
             {brand.products.map((product, index) => (
-                <div className="flex justify-between py-[10px] px-[12px] items-center" key={index}>
+                <div className="flex justify-between py-[8.5px] px-[12px] relative items-center hover:bg-[#F8F8F7] rounded-[6px] transition duration-500" key={index}>
                     <Text className="text-[14px] lg:text-[17px] leading-[23.15px] font-normal text-[#000]">{product.productName}</Text>
-                    <Text className="text-[12px] leading-[16.8px] text-[#000] font-semibold">{product.count}</Text>
+                    <Text className="!text-[12px] !leading-[16.8px] text-dark-100 !font-semibold rounded-[6px] border border-light-50 py-[1px] px-[6px]">{product.count}</Text>
+                    <Link className="w-full h-full absolute top-0 left-0" href={product?.link || '/'}></Link>
                 </div>
             ))}
         </div>

@@ -3,6 +3,7 @@ import Text from "@/components/ui/text/text";
 import Wrapper from "@/components/ui/wrapper/wrapper";
 import HeaderNavigation from "../nav/header-navigation";
 import SearchIconButton from "@/sections/main/search-bar/SearchIconButton";
+import CountryDropdown from "@/components/country-dropdown/country-dropdown";
 
 const Header = () => {
   return (
@@ -16,7 +17,9 @@ const Header = () => {
               World's biggest b2b watch database
             </Text>
           </Wrapper>
-          <Wrapper></Wrapper>
+          <Wrapper>
+            <CountryDropdown />
+          </Wrapper>
         </Container>
       </Wrapper>
       <Wrapper className='py-[18px]'>

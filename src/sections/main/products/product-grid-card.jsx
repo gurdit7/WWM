@@ -8,7 +8,6 @@ import WishlistButton from "../wishlist/wishlist-button";
 import ProductPrice from "./product-price";
 import { countries } from "@/assets/data/countries";
 import H6 from "@/components/ui/headings/h6";
-
 const ProductGridCard = ({ item }) => {
   return (
     <Wrapper className="max-w-[265px] w-full">
@@ -32,23 +31,27 @@ const ProductGridCard = ({ item }) => {
           </Wrapper>
           <WishlistButton />
         </Wrapper>
-        <Text className='!leading-[24px] text-dark-100'>{item?.incl}</Text>
+        <Text className="!leading-[24px] text-dark-100">{item?.incl}</Text>
         <Wrapper className="flex items-center justify-between gap-6 mt-3">
-            <ProductPrice item={item}/>
-            {countries.map((country, i)=>(
+          <ProductPrice item={item} />
+          {countries.map(
+            (country, i) =>
               country.label === item.sellerLocation && (
-                <H6 key={i} className="!font-semibold !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
-                  <Image                   
-                  src={country?.icon?.src}
-                  width={18.02}
-                  height={11.99}
-                  alt={country.label}
-                  className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
-                />
-                {country.code}
-              </H6>
-            )
-          ))}
+                <H6
+                  key={i}
+                  className="!font-semibold !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]"
+                >
+                  <Image
+                    src={`/countries-flags/${country.code.toLowerCase()}.svg`}
+                    width={18.02}
+                    height={11.99}
+                    alt={country.label}
+                    className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
+                  />
+                  {country.code}
+                </H6>
+              )
+          )}
         </Wrapper>
       </Wrapper>
     </Wrapper>

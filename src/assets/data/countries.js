@@ -1,4 +1,3 @@
-import netherlands from '../../../public/countries-flags/netherlands.webp';
 export const countries = [
     { code: '', label: '', phone: '' },
     { code: 'AD', label: 'Andorra', phone: '376' },
@@ -7,7 +6,7 @@ export const countries = [
       label: 'United Arab Emirates',
       phone: '971',
     },
-    { code: 'AF', label: 'Afghanistan', phone: '93' },
+    { code: 'AF', label: 'Afghanistan', phone: '93', currency_code: 'AFN' },
     {
       code: 'AG',
       label: 'Antigua and Barbuda',
@@ -274,7 +273,7 @@ export const countries = [
     { code: 'NF', label: 'Norfolk Island', phone: '672' },
     { code: 'NG', label: 'Nigeria', phone: '234' },
     { code: 'NI', label: 'Nicaragua', phone: '505' },
-    { code: 'NL', label: 'Netherlands', phone: '31', icon:netherlands },
+    { code: 'NL', label: 'Netherlands', phone: '31' },
     { code: 'NO', label: 'Norway', phone: '47' },
     { code: 'NP', label: 'Nepal', phone: '977' },
     { code: 'NR', label: 'Nauru', phone: '674' },

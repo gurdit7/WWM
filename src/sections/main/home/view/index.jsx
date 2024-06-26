@@ -39,14 +39,14 @@ const index = () => {
       <BusinessWatchPlatform/>
 
       <Wrapper className="bg-light-150">
-        <Newsletter labelBgColor="!bg-light-150 top-[14px]" />
+        <Newsletter labelBgColor="!bg-light-150 !top-[14px] peer-focus:!top-[-9px]" />
       </Wrapper>
       <Container>
         <Wrapper className="max-w-[600px] w-full bg-white mx-auto">
           <FAQ />
         </Wrapper>
       </Container>
-      <Newsletter labelBgColor='top-[14px]' />
+      <Newsletter labelBgColor='!top-[14px] peer-focus:!top-[-9px]' />
     </Wrapper>
   );
 };

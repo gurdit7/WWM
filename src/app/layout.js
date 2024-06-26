@@ -2,6 +2,7 @@ import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/layouts/main/header/header";
 import Footer from "@/layouts/main/footer/footer";
+import { CurrencyProvider } from "@/contexts/currency-provider/currency-provider";
 
 const notoSans = Noto_Sans({ subsets: ["latin"], variable: "--font-noto" });
 
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={notoSans.className}>
+        <CurrencyProvider>
         <Header />
         <main>{children}</main>  
         <Footer />      
+        </CurrencyProvider>
       </body>
     </html>
   );
