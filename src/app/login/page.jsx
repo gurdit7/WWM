@@ -5,13 +5,15 @@ import loginbg from "../../assets/images/login-bg.jpg"
 import { useState } from "react"
 import Input from "@/components/form/input"
 import Button from "@/components/form/button"
-import GoogleIcon from "../../../public/icons/googleIcon"
-import GitHubIcon from "../../../public/icons/githubIcon"
+import GoogleIcon from "../../../public/icons/IconGoogle"
+import GitHubIcon from "../../../public/icons/IconGithub"
 import Text from "@/components/ui/text/text"
-import PasswordVisibilty from "../../../public/icons/password-visibility"
-import PasswordVisibiltyOff from "../../../public/icons/password-visibility-off"
+import PasswordVisibilty from "../../../public/icons/IconPasswordVisibility"
+import PasswordVisibiltyOff from "../../../public/icons/IconPasswordVisibilityOff"
 import H1 from "@/components/ui/headings/h1"
 import ImageWrapper from "@/components/ui/image/image-wrapper"
+import IconArrowBack from "../../../public/icons/IconArrowBack.jsx"
+import LinkComponent from "@/components/ui/Link"
 
 const Login = () => {
 
@@ -21,13 +23,19 @@ const Login = () => {
 
     return (
         <div className="min-h-screen flex flex-col md:flex-row w-full">
-            <div className="w-full hidden md:block max-w-[1166px]">
+            <div className="w-full relative hidden md:block max-w-[1166px]">
                 <ImageWrapper
                     className="max-h-screen"
                     image={loginbg}
                     alt="Picture of the login background"
                 />
-                {/* <Text>Back to dashboard</Text> */}
+                <LinkComponent
+                    to="/"
+                    children={<><IconArrowBack className="fill-white" />Back to dashboard</>}
+                    className="absolute cursor-pointer flex items-center gap-x-2 text-white top-[40px] left-[40px]"
+                />
+                <Text className="text-[15px] absolute left-[40px] bottom-[40px] leading-[22.5px] text-white font-semibold">© 2024 Copyright WorldWatch Market</Text>
+
             </div>
             <div className="w-full max-w-[562px] bg-white lg:w-1/2 flex  items-center justify-center">
                 <div className="max-w-md w-full p-6">
@@ -35,6 +43,7 @@ const Login = () => {
                     <form action="#" method="POST" className="space-y-4">
                         <div>
                             <Input
+                                label="Email adress"
                                 name="email"
                                 type="email"
                                 placeholder="Email adress"
@@ -49,6 +58,7 @@ const Login = () => {
                                 type={isPasswordShow ? "password" : "text"}
                                 placeholder="Password"
                                 required={true}
+                                label="Password"
                                 value={password}
                                 className="relative"
                                 setInputData={(e) => setPassword(e.target.value)}

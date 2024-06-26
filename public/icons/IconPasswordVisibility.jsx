@@ -1,5 +1,5 @@
 
-const PasswordVisibilty = ({ className, onClick }) => {
+const IconPasswordVisibility = ({ className, onClick }) => {
     return (
         <svg
             onClick={onClick}
@@ -14,4 +14,4 @@ const PasswordVisibilty = ({ className, onClick }) => {
     )
 }
 
-export default PasswordVisibilty
+export default IconPasswordVisibility

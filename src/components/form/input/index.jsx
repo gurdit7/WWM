@@ -11,7 +11,7 @@ const Input = ({
 }) => {
   return (
     <>
-      <div className={``}>
+      <div className={`relative`}>
         <input
           name={name}
           type={type}
