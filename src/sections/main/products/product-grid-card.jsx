@@ -37,7 +37,7 @@ const ProductGridCard = ({ item }) => {
             <ProductPrice item={item}/>
             {countries.map((country, i)=>(
               country.label === item.sellerLocation && (
-                <H6 className="!font-semibold !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
+                <H6 key={i} className="!font-semibold !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
                   <Image                   
                   src={country?.icon?.src}
                   width={18.02}

@@ -9,3 +9,24 @@
 .featured-products .flickity-slider{
     @apply space-x-[22px];
 }
+
+.reviews .flickity-slider{
+    @apply space-x-2;
+}
+
+button.flickity-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: #000;
+}
+
+button.flickity-button.flickity-prev-next-button.previous {
+    left: 0;
+}
+
+button.flickity-button.flickity-prev-next-button.next {
+    right: 0;
+}

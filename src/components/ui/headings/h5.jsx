@@ -6,7 +6,7 @@ const H5 = ({ as, children, className }) => {
       <h5
         className={
           (className || "") +
-          " text-[17px] font-bold leading-[28px] tracking-[-0.01em]"
+          " text-[14px] font-semibold leading-[24px]"
         }
       >
         {children}
@@ -16,7 +16,7 @@ const H5 = ({ as, children, className }) => {
       <div
         className={
           (className || "") +
-          " text-[27px] font-bold leading-[28px] tracking-[-0.01em]"
+          " text-[14px] font-semibold leading-[24px] "
         }
       >
         {children}

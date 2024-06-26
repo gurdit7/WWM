@@ -2,16 +2,19 @@
 import Container from "@/components/ui/container/container";
 import H3 from "@/components/ui/headings/h3";
 import Wrapper from "@/components/ui/wrapper/wrapper";
-import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IconChevronRight from "../../../../public/icons/IconChevronRight";
-import { products } from "@/assets/data/products";
-import Image from "next/image";
-import Text from "@/components/ui/text/text";
 import Flickity from "react-flickity-component";
 import ProductGridCard from "../products/product-grid-card";
+import LinkComponent from "@/components/ui/Link";
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({ heading, link, label, items }) => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    if (items) {
+      setProducts(items);
+    }
+  }, [items]);
   const flickityOptions = {
     freeScroll: true,
     contain: true,
@@ -20,19 +23,16 @@ const FeaturedProducts = () => {
     pageDots: false,
   };
   return (
-    <Wrapper className="bg-[#F7F7F7] py-[65px]">
+    <Wrapper className="py-[65px]">
       <Container>
         <Wrapper className="flex items-center justify-between">
-          <H3>Featured watches</H3>
-          <Link
-            className="text-[15px] font-semibold leading-[22.5px] flex gap-[14px] items-center py-2"
-            href="/"
-          >
-            All watches
+          <H3>{heading}</H3>
+          <LinkComponent withIcon={true} to={link}>
+            {label}
             <IconChevronRight size="24px" className="fill-dark-100" />
-          </Link>
+          </LinkComponent>
         </Wrapper>
-        <Wrapper className='mt-6'>
+        <Wrapper className="mt-6">
           <Flickity
             className={"carousel featured-products"}
             elementType={"div"}
@@ -41,8 +41,8 @@ const FeaturedProducts = () => {
             reloadOnUpdate
             static
           >
-            {products.map((item, i) => (         
-                <ProductGridCard item={item} key={i} />         
+            {products.map((item, i) => (
+              <ProductGridCard item={item} key={i} />
             ))}
           </Flickity>
         </Wrapper>

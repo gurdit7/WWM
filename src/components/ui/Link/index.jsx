@@ -1,14 +1,24 @@
-import Link from 'next/link'
-
+import Link from "next/link";
 const LinkComponent = ({ children, withIcon, to, className }) => {
-    return (
-            <Link
-                className={`text-[15px] leading-[22px] font-semibold ${className}`}
-                href={to}
-            >
-             <div className='flex items-center gap-x-1'> {children} {withIcon}</div>
-            </Link>
-    )
-}
+  return (
+    <>
+      {withIcon ? (
+        <Link
+          className="text-[15px] font-semibold leading-[22.5px] flex gap-[14px] items-center py-2"
+          href={to}
+        >
+          {children}
+        </Link>
+      ) : (
+        <Link
+          className={`text-[15px] border border-white border-opacity-50 shadow-3xl outline outline-white leading-[22.5px] w-full pt-[13px] pb-[14px] px-[18px] block bg-black rounded-[6px] text-center h-[50px] text-white font-semibold ${className || ''}`}
+          href={to}
+        >
+          {children}
+        </Link>
+      )}
+    </>
+  );
+};
 
-export default LinkComponent
+export default LinkComponent;
