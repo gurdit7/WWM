@@ -2,7 +2,7 @@ export const products = [
     {
       title: "Omega Speedmaster",
       referenceNumber: "1317.021",      
-      price: "€ 1.699",
+      price: 1.699,
       taxType: "Margin",
       url: "/",
       sellerLocation:"Netherlands",
@@ -13,7 +13,7 @@ export const products = [
     {
       title: "Omega Speedmaster",
       referenceNumber: "1317.021",
-      price: "€ 1.699",
+      price: 1.699,
       taxType: "VAT",
       url: "/",
       sellerLocation:"Netherlands",
@@ -24,7 +24,7 @@ export const products = [
     {
       title: "Omega Speedmaster",
       referenceNumber: "1317.021",
-      price: "€ 1.699",
+      price: 1.699,
       taxType: "Margin",
       incl:'Incl. Watch and papers',
       sellerLocation:"Netherlands",
@@ -35,7 +35,7 @@ export const products = [
     {
       title: "Omega Speedmaster",
       referenceNumber: "1317.021",
-      price: "€ 1.699",
+      price: 1.699,
       incl:'Incl. Watch and papers',
       taxType: "Margin",
       sellerLocation:"Netherlands",
@@ -46,7 +46,7 @@ export const products = [
     {
         title: "Omega Speedmaster",
         referenceNumber: "1317.021",
-        price: "€ 1.699",
+        price: 1.699,
         taxType: "Margin",
         url: "/",
         sellerLocation:"Netherlands",
@@ -57,7 +57,7 @@ export const products = [
       {
         title: "Omega Speedmaster",
         referenceNumber: "1317.021",
-        price: "€ 1.699",
+        price: 1.699,
         taxType: "VAT",
         url: "/",
         sellerLocation:"Netherlands",
@@ -68,7 +68,7 @@ export const products = [
       {
         title: "Omega Speedmaster",
         referenceNumber: "1317.021",
-        price: "€ 1.699",
+        price: 1.699,
         taxType: "Margin",
         incl:'Incl. Watch and papers',
         sellerLocation:"Netherlands",
@@ -79,7 +79,7 @@ export const products = [
       {
         title: "Omega Speedmaster",
         referenceNumber: "1317.021",
-        price: "€ 1.699",
+        price: 1.699,
         incl:'Incl. Watch and papers',
         taxType: "Margin",
         sellerLocation:"Netherlands",
