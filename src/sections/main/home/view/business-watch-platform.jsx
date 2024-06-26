@@ -25,8 +25,8 @@ const BusinessWatchPlatform = () => {
                 <H2 as="tag" className="text-center">
                     The biggest B2B watch-platform in the world.
                 </H2>
-                <Wrapper className="flex items-start my-[48px] py-[40px] pl-[40px] mx-auto rounded-[10px] bg-[#FAF9F7] gap-x-[12px] w-full max-w-[1271px]">
-                    <Wrapper className="rounded-[6px] w-full max-w-[472px]">
+                <Wrapper className="flex items-start my-[48px] py-[40px] pl-[40px] mx-auto rounded-[10px] bg-[#F4F4F3] gap-x-[12px] w-full max-w-[1271px]">
+                    <Wrapper className="rounded-[6px] w-full max-w-[436px]">
                         {businessWatchPlatform.map((platform, i) => (
                             <Wrapper
                                 onClick={() => setSelectedTab(i)}
@@ -36,11 +36,11 @@ const BusinessWatchPlatform = () => {
                             >
                                 <Wrapper className="flex gap-x-2 items-center">
                                     <IconBell />
-                                    <H4 as="tag" className="font-semibold">
+                                    <H4 as="tag" className="font-semibold text-[#000]">
                                         {platform.title}
                                     </H4>
                                 </Wrapper>
-                                <Text className="text-[14px] text-left leading-[24px] text-[#000] opacity-65">
+                                <Text className="text-[14px] text-left leading-[24px] text-[#595959]">
                                     {platform.description}
                                 </Text>
                             </Wrapper>
@@ -60,7 +60,7 @@ const BusinessWatchPlatform = () => {
                     {businessMarketing.map((marketing, i) => (
                         <Wrapper key={i} className="flex items-center gap-x-[12px]">
                             {marketing.logo}
-                            <Wrapper className="flex flex-col items-center">
+                            <Wrapper className="flex flex-col gap-y-[4px] items-center">
                                 <H4 className="font-semibold" as="tag">
                                     {marketing.title}
                                 </H4>

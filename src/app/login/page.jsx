@@ -14,6 +14,9 @@ import H1 from "@/components/ui/headings/h1"
 import ImageWrapper from "@/components/ui/image/image-wrapper"
 import IconArrowBack from "../../../public/icons/IconArrowBack.jsx"
 import LinkComponent from "@/components/ui/Link"
+import H4 from "@/components/ui/headings/h4"
+import IconWarranty from "../../../public/icons/IconWarranty"
+import Wrapper from "@/components/ui/wrapper/wrapper"
 
 const Login = () => {
 
@@ -25,22 +28,32 @@ const Login = () => {
         <div className="min-h-screen flex flex-col md:flex-row w-full">
             <div className="w-full relative hidden md:block max-w-[1166px]">
                 <ImageWrapper
-                    className="max-h-screen"
+                    className="h-full"
                     image={loginbg}
                     alt="Picture of the login background"
                 />
                 <LinkComponent
                     to="/"
-                    children={<><IconArrowBack className="fill-white" />Back to dashboard</>}
+                    withIcon={true}
+                    children={<><IconArrowBack className="fill-white " />Back to dashboard</>}
                     className="absolute cursor-pointer flex items-center gap-x-2 text-white top-[40px] left-[40px]"
-                />
+                >
+                </LinkComponent>
                 <Text className="text-[15px] absolute left-[40px] bottom-[40px] leading-[22.5px] text-white font-semibold">© 2024 Copyright WorldWatch Market</Text>
-
             </div>
-            <div className="w-full max-w-[562px] bg-white lg:w-1/2 flex  items-center justify-center">
-                <div className="max-w-md w-full p-6">
-                    <H1 className="text-[17px] leading-[28px] font-semibold mb-7 text-center">Log in to WW/M to continue </H1>
-                    <form action="#" method="POST" className="space-y-4">
+            <div className="w-full  bg-white lg:w-1/2 flex items-start  md:items-center justify-center">
+                <div className="max-w-md w-full py-[18px] px-[20px]">
+                    <Wrapper
+                    className="flex flex-col justify-center items-center gap-y-[12px]"
+                    >
+                        <IconWarranty
+                        className="w-[41.25px] h-[34.98px]"
+                        />
+                    <H4 
+                    as="tag"
+                    className="font-semibold mb-10 text-center">Log in to WW/M to continue </H4>
+                    </Wrapper>
+                    <form action="#" method="POST" className="space-y-3">
                         <div>
                             <Input
                                 label="Email adress"
@@ -73,7 +86,7 @@ const Login = () => {
                                     className="absolute cursor-pointer right-[10px] top-[17px]"
                                 />}
                         </div>
-                        <Text className="text-left cursor-pointer leading-[24px]">Forget Password?</Text>
+                        <Text className="text-left text-[#000] cursor-pointer leading-[24px]">Forget Password?</Text>
                         <div>
                             <Button
                                 type="type"
@@ -83,16 +96,16 @@ const Login = () => {
                             />
                         </div>
                     </form>
-                    <div className="mt-4 text-black text-center flex justify-center gap-x-2">
-                        <Text className="opacity-45">Don't have an account? </Text>
-                        <Text>Sign up</Text>
+                    <div className="mt-[12px] text-center flex justify-center gap-x-2">
+                        <Text className="text-[#8C8C8C]">Don't have an account? </Text>
+                        <Text className="text-black" >Sign up</Text>
                     </div>
-                    <div className="mt-4 flex flex-row items-center justify-center text-center">
-                        <div className="h-[1.5px] bg-[#F4F2F0]  w-full max-w-[183px]"></div>
-                        <Text className="px-4 text-black opacity-50 font-semibold">OR</Text>
-                        <div className="h-[1.5px] bg-[#F4F2F0] w-full max-w-[183px]"></div>
+                    <div className="my-[40px] flex flex-row items-center justify-center text-center">
+                        <div className="h-[1.5px] bg-[#DCDAD8]  w-full max-w-[183px]"></div>
+                        <Text className="px-4 text-[#808080] font-semibold">OR</Text>
+                        <div className="h-[1.5px] bg-[#DCDAD8] w-full max-w-[183px]"></div>
                     </div>
-                    <div className="mt-4 flex flex-col gap-y-2  items-center justify-between">
+                    <div className="mt-4 flex flex-col gap-y-3  items-center justify-between">
                         <Button
                             children={<div className="flex items-center gap-x-4 justify-center"><GoogleIcon />Continue with Google</div>}
                             btnType="solid"

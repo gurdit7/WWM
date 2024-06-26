@@ -26,12 +26,12 @@ const Input = ({
           }}
           className={`${className || ''} ${
             label ? "placeholder-opacity-0 placeholder-transparent " : ""
-          } py-4  px-6 peer input-item w-full text-[15px] leading-[22.5px] text-black font-medium border antialiased rounded-md focus:outline-none `}
+          } py-[14.5px]  px-6 peer input-item w-full text-[15px] leading-[22.5px] text-black font-medium border antialiased rounded-md focus:outline-none `}
         />
         {label && (
           <label
             className={`${labelBgColor || ''} block font-normal text-black text-[15px] antialiased absolute
-          leading-[22.5px] top-[18px] text-opacity-65 left-6
+          leading-[22.5px] top-[14px] text-opacity-65 left-6
           peer-focus:left-3
           peer-focus:top-[-9px] transition-all duration-300 peer-focus:text-xs peer-focus:leading-[18px] peer-focus:text-dark-200 peer-focus:text-opacity-50
           peer-focus:px-[6px] bg-white pointer-events-none`}
