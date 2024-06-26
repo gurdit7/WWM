@@ -44,11 +44,11 @@ const ProductGridCard = ({ item }) => {
                   height={11.99}
                   alt={country.label}
                   className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
-                  />
-                  {country.code}
-                  </H6>
-              )
-            ))}
+                />
+                {country.code}
+              </H6>
+            )
+          ))}
         </Wrapper>
       </Wrapper>
     </Wrapper>

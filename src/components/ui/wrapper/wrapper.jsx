@@ -1,6 +1,8 @@
-const Wrapper = ({className, children}) => {
+const Wrapper = ({className, children,onClick}) => {
   return (
-    <div className={(className || "") + " "}>
+    <div 
+    onClick={onClick}
+    className={(className || "") + " "}>
       {children}
     </div>
   );
