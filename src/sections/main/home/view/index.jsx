@@ -1,6 +1,6 @@
-import React from "react";
 import Search from "../search";
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import React from 'react'
+
 import FeaturedProducts from "../featured-products";
 import { products } from "@/assets/data/products";
 import JoinOurPlatform from "../join-our-platform";
@@ -8,6 +8,9 @@ import TrustpilotReviews from "../trustpilot-reviews";
 import Newsletter from "../../newsletter/Newsletter";
 import FAQ from "../faq";
 import Container from "@/components/ui/container/container";
+import Wrapper from '@/components/ui/wrapper/wrapper'
+import FeaturedBrands from '../feature-brands'
+import BusinessWatchPlatform from './business-watch-platform'
 
 const index = () => {
   return (
@@ -21,6 +24,10 @@ const index = () => {
           label="All watches"
         />
       </Wrapper>
+      <FeaturedBrands
+      
+      />
+
       <FeaturedProducts
         heading="Newest watches"
         items={products}
@@ -29,6 +36,8 @@ const index = () => {
       />
       <JoinOurPlatform />
       <TrustpilotReviews />
+      <BusinessWatchPlatform/>
+
       <Wrapper className="bg-light-150">
         <Newsletter labelBgColor="!bg-light-150 top-[14px]" />
       </Wrapper>

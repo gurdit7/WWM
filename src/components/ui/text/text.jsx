@@ -1,6 +1,6 @@
 const Text = ({children, className}) => {
   return (
-    <p className={(className || "" ) + " text-sm font-normal leading-[19.07px] antialiased "}>
+    <p className={(className || "" ) + " leading-[19.07px] antialiased "}>
         {children}
     </p>
   );
