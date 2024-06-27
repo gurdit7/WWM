@@ -1,8 +1,6 @@
 
-"use client"
 
 import loginbg from "../../assets/images/login-bg.jpg"
-import { useState } from "react"
 import Input from "@/components/form/input"
 import Button from "@/components/form/button"
 import GoogleIcon from "../../../public/icons/IconGoogle"
@@ -17,18 +15,16 @@ import LinkComponent from "@/components/ui/Link"
 import H4 from "@/components/ui/headings/H4"
 import IconWarranty from "../../../public/icons/IconWarranty"
 import Wrapper from "@/components/ui/wrapper/Wrapper"
+import Image from "next/image"
+import LoginForm from "@/sections/LoginForm"
+
 
 const Login = () => {
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [isPasswordShow, setIsPasswordShow] = useState(false)
-
     return (
-        <div className="min-h-screen flex flex-col relative md:flex-row w-full">
-            <div className="bg-[url('/image/login-bg.jpg')] h-screen bg-cover bg-center " >
+        <div className="flex h-full flex-col relative md:flex-row w-full">
 
-            <div className="w-full relative hidden md:block max-w-[1166px]">
+            <div className="w-full relative max-xs-tab:absolute top-0 left-0 h-full max-w-[1166px]">
                 <ImageWrapper
                     className="h-screen"
                     image={loginbg}
@@ -43,61 +39,25 @@ const Login = () => {
                 </LinkComponent>
                 <Text className="text-[15px] absolute left-[40px] bottom-[40px] leading-[22.5px] text-white font-semibold">© 2024 Copyright WorldWatch Market</Text>
             </div>
-            <div className="w-full absolute top-0  bg-white lg:w-1/2 flex items-start  md:items-center justify-center">
-                <div className="max-w-md w-full py-[18px] px-[20px]">
+            <div className="w-full  lg:w-1/2 flex items-start relative z-10 px-[20px] py-[140px]  md:items-center justify-center">
+                <div className=" max-w-[624px]  w-full py-[18px]  px-[20px] bg-white">
                     <Wrapper
                         className="flex flex-col justify-center items-center gap-y-[12px]"
                     >
-                        <IconWarranty
-                            className="w-[41.25px] h-[34.98px]"
+                        <Image
+                            src="/image/icon.png"
+                            width={41.25}
+                            height={34.98}
+                            alt="Logo Icon"
                         />
                         <H4
                             as="tag"
                             className="font-semibold mb-10 text-center">Log in to WW/M to continue </H4>
+
+                            <LoginForm/>
                     </Wrapper>
-                    <form action="#" method="POST" className="space-y-3">
-                        <div>
-                            <Input
-                                label="Email adress"
-                                name="email"
-                                type="email"
-                                placeholder="Email adress"
-                                required={true}
-                                value={email}
-                                setInputData={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                        <div className="relative">
-                            <Input
-                                name="password"
-                                type={isPasswordShow ? "password" : "text"}
-                                placeholder="Password"
-                                required={true}
-                                label="Password"
-                                value={password}
-                                className="relative"
-                                setInputData={(e) => setPassword(e.target.value)}
-                            />
-                            {isPasswordShow ?
-                                <PasswordVisibiltyOff
-                                    onClick={() => setIsPasswordShow(!isPasswordShow)}
-                                    className="absolute cursor-pointer right-[10px] top-[17px]"
-                                /> :
-                                <PasswordVisibilty
-                                    onClick={() => setIsPasswordShow(!isPasswordShow)}
-                                    className="absolute cursor-pointer right-[10px] top-[17px]"
-                                />}
-                        </div>
-                        <Text className="text-left text-[#000] text-[14px] cursor-pointer leading-[24px]">Forget Password?</Text>
-                        <div>
-                            <Button
-                                type="type"
-                                btnType="solid"
-                                color="black"
-                                children={"Continue"}
-                            />
-                        </div>
-                    </form>
+                    
+                  
                     <div className="mt-[12px] text-center flex justify-center gap-x-2">
                         <Text className="text-[#8C8C8C]">Don't have an account? </Text>
                         <Text className="text-black" >Sign up</Text>
@@ -121,8 +81,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            </div>
-
         </div>
     )
 }
