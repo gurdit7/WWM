@@ -4,7 +4,7 @@ const LinkComponent = ({ children, withIcon, to, className }) => {
     <>
       {withIcon ? (
         <Link
-          className={`text-[15px] font-semibold  leading-[22.5px] flex gap-[14px] items-center py-2 ${className || ''}  `}
+          className={`text-[15px] font-semibold  leading-[22.5px] flex gap-[14px] items-center md:py-2 ${className || ''}  `}
           href={to}
         >
           {children}

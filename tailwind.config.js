@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+import login from './public/image/login-bg.jpg'
 module.exports = {
   content: [
     "./public/**/*.{js,ts,jsx,tsx,mdx}",
