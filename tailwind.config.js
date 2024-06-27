@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
-import login from './public/image/login-bg.jpg'
 module.exports = {
   content: [
     "./public/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,6 +19,7 @@ module.exports = {
       colors: {
         light: {
           50: "#DCDAD8",
+          75: "#E8E7E5",
           100: "#FAF9F7",
           150: "#F4F4F3",
           200: "#F4F2F0",
@@ -36,6 +35,7 @@ module.exports = {
       },
       boxShadow: {
         "3xl": " 0px 1px 2px 0px rgba(0,0,0,0.25)",
+        "6xl":"0px 1px 2px 0px rgba(0,0,0,0.65)"
       },
     },
   },

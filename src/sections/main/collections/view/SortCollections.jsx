@@ -1,4 +1,4 @@
-import Container from "@/components/ui/container/container"
+import Container from "@/components/ui/container/Container"
 import Wrapper from "@/components/ui/wrapper/wrapper"
 import IconHumburger from "../../../../../public/icons/IconHamburger"
 import IconGrid from "../../../../../public/icons/IconGrid"
