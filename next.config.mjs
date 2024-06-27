@@ -2,8 +2,14 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-      domains: ['img.chrono24.com'],
-    }
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'img.chrono24.com',
+          pathname: '**',
+        },
+      ],
+    } 
   }
 
 export default nextConfig;

@@ -1,9 +1,9 @@
 import { footerNavigation } from "@/assets/data/navigation";
-import CountryDropdown from "@/components/country-dropdown/country-dropdown";
-import Vertical from "@/components/nav-section/desktop/vertical/vertical";
-import Container from "@/components/ui/container/container";
-import Text from "@/components/ui/text/text";
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import CountryDropdown from "@/components/country-dropdown/CountryDropdown";
+import Vertical from "@/components/nav-section/desktop/vertical/Vertical";
+import Container from "@/components/ui/container/Container";
+import Text from "@/components/ui/text/Text";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
 import Link from "next/link";
 
 const Footer = () => {

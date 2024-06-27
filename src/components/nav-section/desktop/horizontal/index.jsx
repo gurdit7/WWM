@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import IconDownArrow from "../../../../../public/icons/IconDownArrow";
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
 import { usePathname } from "next/navigation";
 const NavHoz = ({ items }) => {
   const path = usePathname();
@@ -16,7 +16,7 @@ const NavHoz = ({ items }) => {
               } text-sm font-semibold leading-[19.07px] antialiased text-dark-100 ${
                 item.link === path ? "opacity-100" : "opacity-40"
               }`}
-              href={item.link}
+              href={item.link || '/'}
             >
               {item.label}
               {item?.children && <IconDownArrow size="19px" />}
@@ -27,7 +27,7 @@ const NavHoz = ({ items }) => {
                   {item?.children.map((child, i) => (
                     <li key={i}>
                       <Link
-                        href={child.link}
+                        href={child.link || '/'}
                         className={`${
                           child?.children ? "flex items-center gap-2" : ""
                         } text-sm font-semibold leading-[19.07px] antialiased text-dark-100 ${

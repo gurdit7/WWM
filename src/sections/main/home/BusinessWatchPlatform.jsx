@@ -1,17 +1,14 @@
 "use client"
 
-import Container from "@/components/ui/container/container"
-import H2 from "@/components/ui/headings/h2"
-import Wrapper from "@/components/ui/wrapper/wrapper"
+import Container from "@/components/ui/container/Container"
+import H2 from "@/components/ui/headings/H2"
+import Wrapper from "@/components/ui/wrapper/Wrapper"
 import { businessWatchPlatform } from "@/assets/data/busineswatchplatform"
-import IconBell from "../../../../../public/icons/IconBell"
-import H4 from "@/components/ui/headings/h4"
-import Text from "@/components/ui/text/text"
+import IconBell from "../../../../public/icons/IconBell"
+import H4 from "@/components/ui/headings/H4"
+import Text from "@/components/ui/text/Text"
 import { useState } from "react"
-import ImageWrapper from "@/components/ui/image/image-wrapper"
 import Image from "next/image"
-import laptop from "@/assets/images/login-bg.jpg"
-import IconRecommandUs from "../../../../../public/icons/IconRecommandUs"
 import { businessMarketing } from "@/assets/data/business-marketing"
 
 const BusinessWatchPlatform = () => {
@@ -51,7 +48,7 @@ const BusinessWatchPlatform = () => {
                             src={businessWatchPlatform[selectedTab].image}
                             width={600}
                             height={70}
-                            objectFit="cover"
+                            className="object-cover"
                             alt={"laptop"}
                         />
                     </Wrapper>

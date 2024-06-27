@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import IconArrowRight from "../../../public/icons/IconArrowRight";
-import Text from "../ui/text/text";
-import Wrapper from "../ui/wrapper/wrapper";
+import Text from "../ui/text/Text";
+import Wrapper from "../ui/wrapper/Wrapper";
 
 const Accordions = ({ items }) => {
   const [open, setOpen] = useState([]);

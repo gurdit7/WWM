@@ -1,10 +1,10 @@
 "use client";
 import Button from "@/components/form/button";
 import Input from "@/components/form/input";
-import Container from "@/components/ui/container/container";
-import H2 from "@/components/ui/headings/h2";
+import Container from "@/components/ui/container/Container";
+import H2 from "@/components/ui/headings/H2";
 import TickItem from "@/components/ui/tick-list/tick-list-item";
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
 import { useState } from "react";
 
 const Newsletter = ({labelBgColor}) => {
