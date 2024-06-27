@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <Wrapper className="mb-[30px]">
       <Container  className="my-[35px]">
-        <Wrapper className="flex gap-x-2">
+        <Wrapper className="flex gap-x-2 flex-wrap">
           <Wrapper className="flex-1">
             <Vertical heading="Service" items={footerNavigation} />
           </Wrapper>
@@ -239,7 +239,7 @@ const Footer = () => {
           </Wrapper>
         </Wrapper>
       </Container>
-      <Container className='flex justify-between items-center'>
+      <Container className='flex flex-col md:flex-row justify-between items-center'>
         <Text className="text-dark-100 !text-[13px] !leading-[18.2px]">
           © {year} Copyright WorldWatch Market
         </Text>

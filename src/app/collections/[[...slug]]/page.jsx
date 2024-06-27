@@ -6,11 +6,11 @@ export async function generateMetadata({ params }) {
   }
 }
 const page = () => {
-return(
-<>
-<Collections/>
-</>
-)
+  return (
+    <>
+      <Collections />
+    </>
+  )
 }
 
 export default page;
