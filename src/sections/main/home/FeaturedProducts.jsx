@@ -42,7 +42,7 @@ const FeaturedProducts = ({ heading, link, label, items }) => {
             static
           >
             {products.map((item, i) => (
-              <ProductGridCard item={item} key={i} />
+              <ProductGridCard item={item} key={i}/>
             ))}
           </Flickity>
         </Wrapper>

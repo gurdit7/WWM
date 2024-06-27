@@ -9,7 +9,9 @@
 .featured-products .flickity-slider{
     @apply space-x-[22px];
 }
-
+.subcollections  .flickity-slider{
+    @apply space-x-2;
+}
 .reviews .flickity-slider{
     @apply space-x-2;
 }
