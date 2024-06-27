@@ -8,6 +8,11 @@ const nextConfig = {
           hostname: 'img.chrono24.com',
           pathname: '**',
         },
+        {
+          protocol: 'https',
+          hostname: 'cdn2.chrono24.com',
+          pathname: '**',
+        }        
       ],
     } 
   }
