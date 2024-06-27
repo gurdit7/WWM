@@ -1,6 +1,6 @@
-import H6 from "@/components/ui/headings/h6";
-import Text from "@/components/ui/text/text";
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import H6 from "@/components/ui/headings/H6";
+import Text from "@/components/ui/text/Text";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
 
 const ProductPrice = ({ item }) => {
   return (

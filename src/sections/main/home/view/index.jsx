@@ -1,16 +1,16 @@
-import Search from "../search";
+import Search from "../Search";
 import React from 'react'
 
-import FeaturedProducts from "../featured-products";
+import FeaturedProducts from "../FeaturedProducts";
 import { products } from "@/assets/data/products";
-import JoinOurPlatform from "../join-our-platform";
-import TrustpilotReviews from "../trustpilot-reviews";
+import JoinOurPlatform from "../JoinOurPlatform";
+import TrustpilotReviews from "../TrustpilotReviews";
 import Newsletter from "../../newsletter/Newsletter";
-import FAQ from "../faq";
-import Container from "@/components/ui/container/container";
-import Wrapper from '@/components/ui/wrapper/wrapper'
-import FeaturedBrands from '../feature-brands'
-import BusinessWatchPlatform from './business-watch-platform'
+import FAQ from "../FAQ";
+import Container from "@/components/ui/container/Container";
+import Wrapper from '@/components/ui/wrapper/Wrapper'
+import FeaturedBrands from '../FeaturedBrands'
+import BusinessWatchPlatform from '../BusinessWatchPlatform'
 
 const index = () => {
   return (

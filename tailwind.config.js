@@ -6,6 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'max-2xl':{"max":"1440px"},
+        'max-xl':{"max":"1366px"},
+        'max-l':{"max":"1280px"},
+        'max-tab':{"max":"1024px"},
+        'max-sm-tab':{"max":"990px"},
+        'max-xs-tab':{"max":"768px"},
+        'max-md':{"max":"749px"},
+        'max-sm':{"max":"576px"}
+      },
       colors: {
         light: {
           50: "#DCDAD8",

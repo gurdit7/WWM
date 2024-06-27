@@ -1,13 +1,13 @@
 "use client"
 
-import Container from "@/components/ui/container/container";
-import Wrapper from "@/components/ui/wrapper/wrapper";
-import H3 from "@/components/ui/headings/h3";
+import Container from "@/components/ui/container/Container";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
+import H3 from "@/components/ui/headings/H3";
 import LinkComponent from "@/components/ui/Link";
 import IconChevronRight from "../../../../public/icons/IconChevronRight";
 import { featuredBrands } from "@/assets/data/brands";
 import IconRolex from "../../../../public/icons/IconRolex";
-import Text from "@/components/ui/text/text";
+import Text from "@/components/ui/text/Text";
 import Link from "next/link";
 
 

@@ -1,4 +1,4 @@
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
 import IconTrustPilot from "../../../../public/icons/IconTrustPilot";
 
 const TrustpilotStar = ({rating, className}) => {

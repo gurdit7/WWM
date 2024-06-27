@@ -1,11 +1,11 @@
 "use client";
-import Container from "@/components/ui/container/container";
-import H3 from "@/components/ui/headings/h3";
-import Wrapper from "@/components/ui/wrapper/wrapper";
+import Container from "@/components/ui/container/Container";
+import H3 from "@/components/ui/headings/H3";
+import Wrapper from "@/components/ui/wrapper/Wrapper";
 import React, { useEffect, useState } from "react";
 import IconChevronRight from "../../../../public/icons/IconChevronRight";
 import Flickity from "react-flickity-component";
-import ProductGridCard from "../products/product-grid-card";
+import ProductGridCard from "../products/ProductGridCard";
 import LinkComponent from "@/components/ui/Link";
 
 const FeaturedProducts = ({ heading, link, label, items }) => {
