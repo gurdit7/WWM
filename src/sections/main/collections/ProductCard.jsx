@@ -7,7 +7,7 @@ const ProductCard = ({ item }) => {
     return (
         <Wrapper className="relative">
         <Image
-          className="h-[268px] min-w-[192px]"
+          className="h-[268px] object-cover min-w-[192px]"
           src={item.image}
           width={192}
           height={268}

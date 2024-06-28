@@ -21,7 +21,7 @@ export const products = [
 
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "1317.0266",
     price: 1.799,
     taxType: "VAT",
     url: "/",
@@ -39,7 +39,7 @@ export const products = [
   },
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "1117.021",
     price: 1.899,
     taxType: "Margin",
     incl: 'Incl. Watch and papers',
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "1017.021",
     price: 1.999,
     incl: 'Incl. Watch and papers',
     taxType: "Margin",
@@ -76,7 +76,7 @@ export const products = [
 
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "1917.021",
     price: 2.199,
     taxType: "Margin",
     url: "/",
@@ -95,7 +95,7 @@ export const products = [
 
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "2017.021",
     price: 2.699,
     taxType: "VAT",
     url: "/",
@@ -113,7 +113,7 @@ export const products = [
   },
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "2018.021",
     price: 2.619,
     taxType: "Margin",
     incl: 'Incl. Watch and papers',
@@ -131,7 +131,7 @@ export const products = [
   },
   {
     title: "Omega Speedmaster",
-    referenceNumber: "1317.021",
+    referenceNumber: "2011.021",
     price: 3.699,
     incl: 'Incl. Watch and papers',
     taxType: "Margin",
