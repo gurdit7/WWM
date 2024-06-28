@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import IconDownArrow from '../../../public/icons/IconDownArrow';
 import Text from '../ui/text/text';
+import useTheme from '@/contexts/theme/ThemeContext';
 
 const sortOptions = [
   { value: 'popularity', label: 'Popularity' },
@@ -12,13 +13,14 @@ const sortOptions = [
   { value: 'newest', label: 'Newest Arrivals' },
 ];
 
-const ProductDropdown = ({ onSortChange }) => {
+const ProductDropdown = () => {
   const [selectedOption, setSelectedOption] = useState(sortOptions[0].value);
+  const { setSortCriterion } = useTheme()
 
   const handleSortChange = (event) => {
     const newValue = event.target.value;
     setSelectedOption(newValue);
-    onSortChange(newValue);
+    setSortCriterion(newValue);
   };
 
   return (

@@ -43,7 +43,7 @@ const ProductGridCard = ({ item, quickView }) => {
         <Text className="!leading-[24px] text-dark-100">{item?.incl}</Text>
         <Wrapper
           className={`flex items-center justify-between gap-6 ${
-            quickView ? " mt-6" : " mt-3 "
+            quickView ? "mt-6" : "mt-3"
           }`}
         >
           <Wrapper>
