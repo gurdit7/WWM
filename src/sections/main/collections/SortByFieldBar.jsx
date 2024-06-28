@@ -72,7 +72,7 @@ const SortByFieldBar = () => {
       </Wrapper>
       <Wrapper className='flex-1  flex justify-end'>
       <Wrapper className="flex  items-center gap-x-[18px]">
-        <Text className="text-[14px] leading-[21px] whitespace-nowrap font-medium text-[#000]">
+        <Text className="text-[14px] hidden md:block leading-[21px] whitespace-nowrap font-medium text-[#000]">
           Sort By
         </Text>
         <ProductDropdown />
