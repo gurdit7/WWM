@@ -1,5 +1,15 @@
 "use client";
 
+import IconHamburger from "../../../../public/icons/IconHamburger";
+import IconGrid from "../../../../public/icons/IconGrid";
+import ProductDropdown from "@/components/product-dropdown/ProductDropdown";
+import { useEffect, useState } from "react";
+import Wrapper from "@/components/ui/wrapper/wrapper";
+import Text from "@/components/ui/text/text";
+import useTheme from "@/contexts/theme/ThemeContext";
+import Container from "@/components/ui/container/container";
+import { products } from "@/assets/data/products";
+
 const SortByFieldBar = () => {
   const sortProducts = (products, criterion) => {
     switch (criterion) {
@@ -72,25 +82,4 @@ const SortByFieldBar = () => {
   );
 };
 
-    return (
-        <Container className="flex md:pt-[40px] pt-[18px] justify-between items-center">
-            <Wrapper className="hidden md:block">
-                <Text className="text-[14px] leading-[21px] font-medium text-[#000]">{sortedProducts?.length} results</Text>
-            </Wrapper>
-            <Wrapper className="flex gap-x-1 rounded-[6px] border border-[#F4F4F3] items-center">
-                <IconHamburger
-                    onClick={() => setCollectionsProductsViewStyle("list")}
-                    className={` ${collectionsProductsViewStyle === "list" && "bg-[#F4F4F3]"} cursor-pointer  p-[6px]`} />
-                <IconGrid
-                    onClick={() => setCollectionsProductsViewStyle("grid")}
-                    className={` ${collectionsProductsViewStyle === "grid" && "bg-[#F4F4F3]"} cursor-pointer  p-[6px]`} />
-            </Wrapper>
-            <Wrapper className="flex items-center gap-x-[18px]">
-                <Text className="text-[14px] leading-[21px] hidden lg:block whitespace-nowrap font-medium text-[#000]">Sort By</Text>
-                <ProductDropdown/>
-            </Wrapper>
-        </Container>
-    )
-}
-
-export default SortByFieldBar
+export default SortByFieldBar;
