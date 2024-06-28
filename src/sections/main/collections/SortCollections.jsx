@@ -11,11 +11,11 @@ import CountryDropdown from "@/components/country-dropdown/CountryDropdown"
 import H3 from "@/components/ui/headings/H3"
 import Wrapper from "@/components/ui/wrapper/Wrapper"
 import Text from "@/components/ui/text/Text"
+import WishlistButton from "../wishlist/wishlist-button"
+import H6 from "@/components/ui/headings/h6"
+import Image from "next/image"
 
 const sortProducts = (products, criterion) => {
-
-
-
     switch (criterion) {
         case 'popularity':
             return [...products].sort((a, b) => b.popularity - a.popularity);
@@ -43,7 +43,7 @@ const SortCollections = () => {
 
     return (
 
-        <Container className="flex flex-col gap-y-3">
+        <Container className="flex py-[32px] flex-col gap-y-3">
             <Wrapper className="flex justify-between items-center">
                 <Wrapper className="">
                     <Text className="text-[14px] leading-[21px] font-medium text-[#000]">76.928 results</Text>
@@ -57,7 +57,7 @@ const SortCollections = () => {
                         className={` ${selectedTab === "grid" && "bg-[#F4F4F3]"} cursor-pointer  p-[6px]`} />
                 </Wrapper>
                 <Wrapper
-                    className="flex items-center gap-x-2"
+                    className="flex items-center gap-x-[18px]"
                 >
                     <Text className="text-[14px] leading-[21px] whitespace-nowrap font-medium text-[#000]">Sort By</Text>
                     <ProductDropdown
@@ -78,8 +78,20 @@ const SortCollections = () => {
                                     as="tag"
                                 >1317.021</H3>
                             </Wrapper>
-                            <Wrapper>
-                                <CountryDropdown />
+                            <Wrapper className="flex items-start gap-x-3">
+                                <H6 className="!font-semibold max-w-16 mt-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
+                                    <Image
+                                        src={`/countries-flags/${product.sellerLocation.toLowerCase()}.svg`}
+                                        width={18.02}
+                                        height={11.99}
+                                        alt={product.sellerLocation}
+                                        className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
+                                    />
+                                    {product.sellerLocation}
+                                </H6>
+                                <WishlistButton 
+                                className="!bg-[#F4F4F3]"
+                                />
                             </Wrapper>
                         </Wrapper>
                         <Wrapper className="flex justify-between gap-y-3 items-center w-full">

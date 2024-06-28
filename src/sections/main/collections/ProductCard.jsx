@@ -7,13 +7,13 @@ const ProductCard = ({ item }) => {
     return (
         <Wrapper className="relative">
         <Image
-          className=""
+          className="h-[268px] min-w-[192px]"
           src={item.image}
           width={192}
           height={268}
           alt={item.title + " Image"}
         />
-        <ProductBadge>Sponsored </ProductBadge>
+        <ProductBadge>Sponsored</ProductBadge>
       </Wrapper>
     )
 }

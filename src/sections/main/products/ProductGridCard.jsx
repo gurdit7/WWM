@@ -48,16 +48,16 @@ const ProductGridCard = ({ item, quickView }) => {
         >
           <Wrapper>
             {quickView && (
-              <H6 className="!font-semibold max-w-16 mb-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
-                <Image
-                  src={`/countries-flags/${item.sellerLocation.toLowerCase()}.svg`}
-                  width={18.02}
-                  height={11.99}
-                  alt={item.sellerLocation}
-                  className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
-                />
-                {item.sellerLocation}
-              </H6>
+                <H6 className="!font-semibold max-w-16 mb-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
+                  <Image
+                    src={`/countries-flags/${item.sellerLocation.toLowerCase()}.svg`}
+                    width={18.02}
+                    height={11.99}
+                    alt={item.sellerLocation}
+                    className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
+                  />
+                  {item.sellerLocation}
+                </H6>
             )}
             <ProductPrice item={item} />
           </Wrapper>
