@@ -1,17 +1,16 @@
 "use client"
 
 import Container from "@/components/ui/container/Container"
-import Wrapper from "@/components/ui/wrapper/wrapper"
 import IconHumburger from "../../../../public/icons/IconHamburger"
 import IconGrid from "../../../../public/icons/IconGrid"
-import Text from "@/components/ui/text/text"
 import ProductDropdown from "@/components/product-dropdown/ProductDropdown"
 import { useState, useEffect } from "react"
 import { products } from "@/assets/data/products"
 import ProductCard from "./ProductCard"
-import H2 from "@/components/ui/headings/h2"
 import CountryDropdown from "@/components/country-dropdown/CountryDropdown"
-import H3 from "@/components/ui/headings/h3"
+import H3 from "@/components/ui/headings/H3"
+import Wrapper from "@/components/ui/wrapper/Wrapper"
+import Text from "@/components/ui/text/Text"
 
 const sortProducts = (products, criterion) => {
 
