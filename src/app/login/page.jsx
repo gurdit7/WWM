@@ -39,7 +39,7 @@ const Login = () => {
                 </LinkComponent>
                 <Text className="text-[15px] absolute left-[40px] bottom-[40px] leading-[22.5px] text-white font-semibold">© 2024 Copyright WorldWatch Market</Text>
             </div>
-            <div className="w-full  lg:w-1/2 flex items-start relative z-10 px-[20px] py-[140px]  md:items-center justify-center">
+            <div className="w-full  lg:w-1/2 flex items-start relative z-10 px-[20px] pt-[169.5px] pb-[157.5px]  md:items-center justify-center">
                 <div className=" max-w-[624px]  w-full py-[18px]  px-[20px] bg-white">
                     <Wrapper
                         className="flex flex-col justify-center items-center gap-y-[12px]"

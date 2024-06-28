@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext, useState } from "react";
 const ThemeContext = React.createContext();
+import { products } from "@/assets/data/products";
 export default function useTheme() {
   return useContext(ThemeContext);
 }
@@ -10,6 +11,8 @@ export function ThemeProvider({ children }) {
   const [hideFooter, setHideFooter] = useState(false);
   const [collectionsProductsViewStyle, setCollectionsProductsViewStyle] = useState('list');
   const [sortCriterion,setSortCriterion] = useState("popularity")
+  const [sortedProducts, setSortedProducts]= useState(products)
+
   const value = {
     hideHeader,
     setHideHeader,
@@ -18,7 +21,9 @@ export function ThemeProvider({ children }) {
     collectionsProductsViewStyle,
     setCollectionsProductsViewStyle,
     sortCriterion,
-    setSortCriterion
+    setSortCriterion,
+    sortedProducts,
+    setSortedProducts
   };
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

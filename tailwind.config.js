@@ -6,15 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens:{
-        'max-2xl':{"max":"1440px"},
-        'max-xl':{"max":"1366px"},
-        'max-l':{"max":"1280px"},
-        'max-tab':{"max":"1024px"},
-        'max-sm-tab':{"max":"990px"},
-        'max-xs-tab':{"max":"768px"},
-        'max-md':{"max":"749px"},
-        'max-sm':{"max":"576px"}
+      screens: {
+        'max-2xl': { "max": "1440px" },
+        'max-xl': { "max": "1366px" },
+        'max-l': { "max": "1280px" },
+        'max-tab': { "max": "1024px" },
+        'max-sm-tab': { "max": "990px" },
+        'max-xs-tab': { "max": "768px" },
+        'max-md': { "max": "749px" },
+        'max-sm': { "max": "576px" }
       },
       colors: {
         light: {
@@ -26,16 +26,17 @@ module.exports = {
         },
         dark: {
           100: "#151416",
-          150:"#292b28",
-          200:"#2A292C",
+          150: "#292b28",
+          200: "#2A292C",
         },
-        accent:{
-          100:"#25D366"
+        accent: {
+          100: "#25D366"
         }
       },
       boxShadow: {
         "3xl": " 0px 1px 2px 0px rgba(0,0,0,0.25)",
-        "6xl":"0px 1px 2px 0px rgba(0,0,0,0.65)"
+        "6xl": "0px 1px 2px 0px rgba(0,0,0,0.65)",
+        "9xl": " 0px 1px 2px 0px rgba(16, 24, 40, 0.06)"
       },
     },
   },

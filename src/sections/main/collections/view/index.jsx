@@ -8,7 +8,9 @@ import useTheme from "@/contexts/theme/ThemeContext";
 import SortProducts from "../SortedProductList";
 import SortByFieldBar from "../SortByFieldBar";
 const index = () => {
-    const { collectionsProductsViewStyle } = useTheme();
+    const { collectionsProductsViewStyle,sortedProducts } = useTheme();
+
+    console.log("sortedProducts",sortedProducts)
     return (
         <>
             <Breadcrumb />
