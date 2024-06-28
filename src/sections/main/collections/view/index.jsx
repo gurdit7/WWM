@@ -5,17 +5,19 @@ import FilterBar from "../FilterBar";
 import CollectionGrid from "../CollectionGrid";
 import SortCollections from "../SortCollections";
 import useTheme from "@/contexts/theme/ThemeContext";
+import SortProducts from "../SortedProductList";
+import SortByFieldBar from "../SortByFieldBar";
 const index = () => {
-  const { collectionsProductsViewStyle } = useTheme();
-  return (
-    <>
-      <Breadcrumb />
-      <SubCollections />
-      <FilterBar />
-      <SortCollections />
-      {collectionsProductsViewStyle === "grid" && <CollectionGrid />}
-    </>
-  );
+    const { collectionsProductsViewStyle } = useTheme();
+    return (
+        <>
+            <Breadcrumb />
+            <SubCollections />
+            <FilterBar />
+            <SortByFieldBar />
+            {collectionsProductsViewStyle === "grid" ? <CollectionGrid /> :<SortCollections />}
+        </>
+    );
 };
 
 export default index;

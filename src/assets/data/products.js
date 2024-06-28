@@ -32,6 +32,10 @@ export const products = [
     dateAdded: '2024-06-24',
     popularity: 2,
     relevance: 3,
+    box: "Incl. Watch and papers",
+    year: 1994,
+    material : "22k Gold",
+    condition: "Used"
   },
   {
     title: "Omega Speedmaster",
@@ -46,6 +50,10 @@ export const products = [
     dateAdded: '2024-06-23',
     popularity: 3,
     relevance: 2,
+    box: "Incl. Watch and papers",
+    year: 1992,
+    material : "36k Gold",
+    condition: "Used"
   },
   {
     title: "Omega Speedmaster",
@@ -60,6 +68,10 @@ export const products = [
     dateAdded: '2024-06-22',
     popularity: 4,
     relevance: 8,
+    box: "Incl. Watch and papers",
+    year: 1992,
+    material : "40k Gold",
+    condition: "Used"
   },
 
   {
@@ -75,6 +87,10 @@ export const products = [
     dateAdded: '2024-06-21',
     popularity: 5,
     relevance: 2,
+    box: "Incl. Watch and papers",
+    year: 2000,
+    material : "18k Gold",
+    condition: "Used"
   },
 
   {
@@ -90,6 +106,10 @@ export const products = [
     dateAdded: '2024-06-20',
     popularity: 6,
     relevance: 1,
+    box: "Incl. Watch and papers",
+    year: 2010,
+    material : "18k Gold",
+    condition: "Used"
   },
   {
     title: "Omega Speedmaster",
@@ -104,8 +124,11 @@ export const products = [
     dateAdded: '2024-06-19',
     popularity: 7,
     relevance: 11,
+    box: "Incl. Watch and papers",
+    year: 2003,
+    material : "10k Gold",
+    condition: "Used"
   },
-
   {
     title: "Omega Speedmaster",
     referenceNumber: "1317.021",
@@ -119,6 +142,10 @@ export const products = [
     dateAdded: '2024-06-18',
     popularity: 22,
     relevance: 20,
+    box: "Incl. Watch and papers",
+    year: 1992,
+    material : "18k Gold",
+    condition: "Used"
 
   },
 ];

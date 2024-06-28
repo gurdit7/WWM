@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import IconDownArrow from '../../../public/icons/IconDownArrow';
+import Text from '../ui/text/text';
+import useTheme from '@/contexts/theme/ThemeContext';
 
 const sortOptions = [
   { value: 'popularity', label: 'Popularity' },
@@ -11,30 +13,31 @@ const sortOptions = [
   { value: 'newest', label: 'Newest Arrivals' },
 ];
 
-const ProductDropdown = ({ onSortChange }) => {
+const ProductDropdown = () => {
   const [selectedOption, setSelectedOption] = useState(sortOptions[0].value);
+  const { setSortCriterion } = useTheme()
 
   const handleSortChange = (event) => {
     const newValue = event.target.value;
     setSelectedOption(newValue);
-    onSortChange(newValue);
+    setSortCriterion(newValue);
   };
 
   return (
-    <div className="relative inline-block w-full text-[14px] text-[#2A2C29] leading-[21px] font-medium">
+    <div className="relative inline-block w-full ">
       <select
-        className="w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline"
+        className="w-full px-[20px] py-[10px] rounded-[6px]  placeholder-[#2A2C29] border border-[#DCDAD8]  appearance-none focus:shadow-outline"
         value={selectedOption}
         onChange={handleSortChange}
       >
         {sortOptions.map((option) => (
           <option key={option.value} value={option.value}>
-            {option.label}
+            <Text className="text-[14px] text-[#2A2C29] !leading-[21px] font-medium">{option.label}</Text>
           </option>
         ))}
       </select>
-      <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-eve nts-none">
-        <IconDownArrow size='19px' className="fill-black"/>
+      <div className="absolute inset-y-0 right-[10px] flex items-center  pointer-eve nts-none">
+        <IconDownArrow size='24px' className="fill-[#A1A1A2]" />
       </div>
     </div>
   );

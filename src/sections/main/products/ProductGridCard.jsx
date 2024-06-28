@@ -43,21 +43,21 @@ const ProductGridCard = ({ item, quickView }) => {
         <Text className="!leading-[24px] text-dark-100">{item?.incl}</Text>
         <Wrapper
           className={`flex items-center justify-between gap-6 ${
-            quickView ? " mt-6" : " mt-3 "
+            quickView ? "mt-6" : "mt-3"
           }`}
         >
           <Wrapper>
             {quickView && (
-              <H6 className="!font-semibold max-w-16 mb-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
-                <Image
-                  src={`/countries-flags/${item.sellerLocation.toLowerCase()}.svg`}
-                  width={18.02}
-                  height={11.99}
-                  alt={item.sellerLocation}
-                  className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
-                />
-                {item.sellerLocation}
-              </H6>
+                <H6 className="!font-semibold max-w-16 mb-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
+                  <Image
+                    src={`/countries-flags/${item.sellerLocation.toLowerCase()}.svg`}
+                    width={18.02}
+                    height={11.99}
+                    alt={item.sellerLocation}
+                    className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
+                  />
+                  {item.sellerLocation}
+                </H6>
             )}
             <ProductPrice item={item} />
           </Wrapper>

@@ -6,7 +6,7 @@ const H6 = ({ as, children, className }) => {
       <h6
         className={
           (className || "") +
-          " text-[13px] font-normal leading-[18.2px]"
+          " text-[13px] text-[#2A2C29] font-normal leading-[18.2px]"
         }
       >
         {children}
