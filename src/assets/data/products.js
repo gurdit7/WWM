@@ -103,7 +103,6 @@ export const products = [
     material : "18k Gold",
     condition: "Used"
   },
-
   {
     title: "Omega Speedmaster",
     referenceNumber: "2017.021",
