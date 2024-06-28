@@ -1,5 +1,5 @@
 import H1 from "@/components/ui/headings/h1"
-import Wrapper from "@/components/ui/wrapper/wrapper"
+import Wrapper from "@/components/ui/wrapper/Wrapper"
 
 const ProductInformation = () => {
     return (

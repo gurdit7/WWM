@@ -1,7 +1,7 @@
 
 "use client"
 
-import Wrapper from "@/components/ui/wrapper/wrapper"
+import Wrapper from "@/components/ui/wrapper/Wrapper"
 import { useState } from "react"
 import PasswordVisibilty from "../../public/icons/IconPasswordVisibility"
 import PasswordVisibiltyOff from "../../public/icons/IconPasswordVisibilityOff"
