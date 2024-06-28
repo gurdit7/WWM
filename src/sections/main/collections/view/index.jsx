@@ -16,7 +16,7 @@ const index = () => {
             <FilterBar />
             <SortByFieldBar />
             {collectionsProductsViewStyle === "grid" ? <CollectionGrid /> :<SortCollections />}
-            {quickViewProduct && <QuickView product={quickViewProduct} />}
+            {quickViewProduct && collectionsProductsViewStyle === "grid" && <QuickView product={quickViewProduct} />}
         </>
     );
 };
