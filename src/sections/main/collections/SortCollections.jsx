@@ -35,7 +35,7 @@ const sortProducts = (products, criterion) => {
 const SortCollections = () => {
     const [sortedProducts, setSortedProducts] = useState(products);
     const [sortCriterion, setSortCriterion] = useState('popularity');
-    const [selectedTab, setSelectedTab] = useState("humburger")
+    const [selectedTab, setSelectedTab] = useState("humburger");
 
     useEffect(() => {
         setSortedProducts(sortProducts(products, sortCriterion));
