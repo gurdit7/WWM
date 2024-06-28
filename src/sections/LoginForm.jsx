@@ -2,19 +2,23 @@
 "use client"
 
 import Wrapper from "@/components/ui/wrapper/wrapper"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import PasswordVisibilty from "../../public/icons/IconPasswordVisibility"
 import PasswordVisibiltyOff from "../../public/icons/IconPasswordVisibilityOff"
 import Input from "@/components/form/input"
 import Button from "@/components/form/button"
 import Text from "@/components/ui/text/text"
+import useTheme from "@/contexts/theme/ThemeContext"
 
 const LoginForm = () => {
-
-    const [email, setEmail] = useState("")
+        const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [isPasswordShow, setIsPasswordShow] = useState(false)
-
+    const {setHideHeader, setHideFooter} = useTheme();
+    useEffect(()=>{
+        setHideHeader(true);
+        setHideFooter(true);
+    },[])
     return (
         <Wrapper className="w-full">
             <form action="#" method="POST" className="space-y-3">

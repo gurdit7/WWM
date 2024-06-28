@@ -8,7 +8,11 @@ import useTheme from "@/contexts/theme/ThemeContext";
 import SortByFieldBar from "../SortByFieldBar";
 import QuickView from "../../quick-view/QuickView";
 const index = () => {
-    const { collectionsProductsViewStyle, sortedProducts, quickViewProduct } = useTheme();
+    const { collectionsProductsViewStyle, quickViewProduct, setHideHeader, setHideFooter } = useTheme();
+    useEffect(()=>{
+        setHideHeader(false);
+        setHideFooter(false);
+    },[])
     return (
         <>
             <Breadcrumb />

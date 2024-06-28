@@ -1,19 +1,14 @@
 
 
 import loginbg from "../../assets/images/login-bg.jpg"
-import Input from "@/components/form/input"
 import Button from "@/components/form/button"
 import GoogleIcon from "../../../public/icons/IconGoogle"
 import GitHubIcon from "../../../public/icons/IconGithub"
 import Text from "@/components/ui/text/text"
-import PasswordVisibilty from "../../../public/icons/IconPasswordVisibility"
-import PasswordVisibiltyOff from "../../../public/icons/IconPasswordVisibilityOff"
-import H1 from "@/components/ui/headings/H1"
 import ImageWrapper from "@/components/ui/image/image-wrapper"
 import IconArrowBack from "../../../public/icons/IconArrowBack.jsx"
 import LinkComponent from "@/components/ui/Link"
 import H4 from "@/components/ui/headings/H4"
-import IconWarranty from "../../../public/icons/IconWarranty"
 import Wrapper from "@/components/ui/wrapper/wrapper"
 import Image from "next/image"
 import LoginForm from "@/sections/LoginForm"
@@ -23,9 +18,9 @@ const Login = () => {
     return (
         <div className="flex h-full flex-col relative md:flex-row w-full">
 
-            <div className="w-full relative max-xs-tab:absolute top-0 left-0 h-full max-w-[1166px]">
+            <div className="w-full relative max-xs-tab:absolute top-0 left-0 lg:max-w-[67.5%]">
                 <ImageWrapper
-                    className="h-screen"
+                    className="h-full min-h-screen object-cover absolute w-full"
                     image={loginbg}
                     alt="Picture of the login background"
                 />
@@ -38,8 +33,8 @@ const Login = () => {
                 </LinkComponent>
                 <Text className="text-[15px] absolute left-[40px] bottom-[40px] leading-[22.5px] text-white font-semibold">© 2024 Copyright WorldWatch Market</Text>
             </div>
-            <div className="w-full  lg:w-1/2 flex items-start relative z-10 px-[20px] pt-[169.5px] pb-[157.5px]  md:items-center justify-center">
-                <div className=" max-w-[624px]  w-full py-[18px]  px-[20px] bg-white">
+            <div className="w-full  lg:max-w-[32.5%] flex items-start relative z-10 pt-[169.5px] pb-[157.5px]  md:items-center justify-center">
+                <div className=" max-w-[624px]  w-full py-[18px] px-[100px] bg-white">
                     <Wrapper
                         className="flex flex-col justify-center items-center gap-y-[12px]"
                     >
