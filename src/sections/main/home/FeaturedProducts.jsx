@@ -1,7 +1,7 @@
 "use client";
-import Container from "@/components/ui/container/Container";
-import H3 from "@/components/ui/headings/H3";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Container from "@/components/ui/container/container";
+import H3 from "@/components/ui/headings/h3";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import React, { useEffect, useState } from "react";
 import IconChevronRight from "../../../../public/icons/IconChevronRight";
 import Flickity from "react-flickity-component";

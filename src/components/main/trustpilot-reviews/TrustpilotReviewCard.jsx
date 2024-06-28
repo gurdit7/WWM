@@ -1,8 +1,8 @@
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import TrustpilotStar from "./TrustpilotStar";
 import { getHoursFromNow } from "@/utils/hours-from-now";
 import H4 from "@/components/ui/headings/H4";
-import Text from "@/components/ui/text/Text";
+import Text from "@/components/ui/text/text";
 
 const TrustpilotReviewCard = ({item}) => {
 

@@ -1,22 +1,18 @@
 "use client"
 
-import Container from "@/components/ui/container/Container"
+import Container from "@/components/ui/container/container"
 import H2 from "@/components/ui/headings/H2"
-import Wrapper from "@/components/ui/wrapper/Wrapper"
+import Wrapper from "@/components/ui/wrapper/wrapper"
 import { businessWatchPlatform } from "@/assets/data/busineswatchplatform"
 import IconBell from "../../../../public/icons/IconBell"
 import H4 from "@/components/ui/headings/H4"
-import Text from "@/components/ui/text/Text"
+import Text from "@/components/ui/text/text"
 import { useState } from "react"
 import Image from "next/image"
 import { businessMarketing } from "@/assets/data/business-marketing"
 
 const BusinessWatchPlatform = () => {
-
     const [selectedTab, setSelectedTab] = useState(0)
-
-    console.log("selectedTab", selectedTab)
-
     return (
 
         <Container className="py-[35px] md:py-[100px]">

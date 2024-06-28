@@ -2,10 +2,10 @@
 import { reviews } from "@/assets/data/review";
 import TrustpilotReviewCard from "@/components/main/trustpilot-reviews/TrustpilotReviewCard";
 import TrustpilotStar from "@/components/main/trustpilot-reviews/TrustpilotStar";
-import Container from "@/components/ui/container/Container";
+import Container from "@/components/ui/container/container";
 import H2 from "@/components/ui/headings/H2";
 import H5 from "@/components/ui/headings/H5";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import Flickity from "react-flickity-component";
 const TrustpilotReviews = () => {
   const flickityOptions = {

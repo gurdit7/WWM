@@ -12,7 +12,7 @@ export function ThemeProvider({ children }) {
   const [collectionsProductsViewStyle, setCollectionsProductsViewStyle] = useState('list');
   const [sortCriterion,setSortCriterion] = useState("popularity")
   const [sortedProducts, setSortedProducts]= useState(products)
-
+  const [quickViewProduct, setQuickViewProduct] = useState(false);
   const value = {
     hideHeader,
     setHideHeader,
@@ -23,7 +23,9 @@ export function ThemeProvider({ children }) {
     sortCriterion,
     setSortCriterion,
     sortedProducts,
-    setSortedProducts
+    setSortedProducts,
+    quickViewProduct,
+    setQuickViewProduct
   };
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

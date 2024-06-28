@@ -26,13 +26,13 @@ const ProductDropdown = () => {
   return (
     <div className="relative inline-block w-full ">
       <select
-        className="w-full px-[20px] py-[10px] rounded-[6px]  placeholder-[#2A2C29] border border-[#DCDAD8]  appearance-none focus:shadow-outline"
+        className="w-full px-[18px] pr-[34px] py-[10px] rounded-[6px]  text-[14px] text-[#2A2C29] !leading-[21px] font-medium placeholder-[#2A2C29] border border-[#DCDAD8]  appearance-none focus:shadow-outline"
         value={selectedOption}
         onChange={handleSortChange}
       >
         {sortOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            <Text className="text-[14px] text-[#2A2C29] !leading-[21px] font-medium">{option.label}</Text>
+          <option key={option.value} value={option.value} className="text-[14px] text-[#2A2C29] !leading-[21px] font-medium">
+{option.label}
           </option>
         ))}
       </select>

@@ -6,9 +6,9 @@ import { products } from "@/assets/data/products";
 import JoinOurPlatform from "../JoinOurPlatform";
 import TrustpilotReviews from "../TrustpilotReviews";
 import Newsletter from "../../newsletter/Newsletter";
-import FAQ from "../FAQ";
-import Container from "@/components/ui/container/Container";
-import Wrapper from '@/components/ui/wrapper/Wrapper'
+import FAQ from "../faq";
+import Container from "@/components/ui/container/container";
+import Wrapper from '@/components/ui/wrapper/wrapper'
 import FeaturedBrands from '../FeaturedBrands'
 import BusinessWatchPlatform from '../BusinessWatchPlatform'
 

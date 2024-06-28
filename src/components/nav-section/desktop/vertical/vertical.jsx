@@ -1,5 +1,5 @@
 'use client';
-import Wrapper from '@/components/ui/wrapper/Wrapper'
+import Wrapper from '@/components/ui/wrapper/wrapper'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 

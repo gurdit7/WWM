@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import IconDownArrow from "../../../../../public/icons/IconDownArrow";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import { usePathname } from "next/navigation";
 const NavHoz = ({ items }) => {
   const path = usePathname();

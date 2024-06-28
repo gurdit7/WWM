@@ -1,11 +1,11 @@
 "use client";
 
 import { allWatches } from "@/assets/data/products";
-import Container from "@/components/ui/container/Container";
+import Container from "@/components/ui/container/container";
 import H1 from "@/components/ui/headings/H1";
-import H3 from "@/components/ui/headings/H3";
-import Text from "@/components/ui/text/Text";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import H3 from "@/components/ui/headings/h3";
+import Text from "@/components/ui/text/text";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import { formatNumber } from "@/utils/format-number";
 import Image from "next/image";
 import Link from "next/link";

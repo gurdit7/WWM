@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Wrapper from "../ui/wrapper/Wrapper";
+import Wrapper from "../ui/wrapper/wrapper";
 import Image from "next/image";
 import useCurrency from "@/contexts/currency-provider/CurrencyProvider";
 import { Countries } from "@/assets/data/countries";
@@ -45,7 +45,7 @@ const CountryDropdown = ({ className, footer }) => {
       <Wrapper
         className={`${
           open ? "max-h-[200px]" : "max-h-[0px]"
-        } transtion duration-500  left-0 absolute overflow-y-auto bg-white ${
+        } transtion duration-500 scroll-bar-hide left-0 absolute overflow-y-auto bg-white ${
           footer ? "bottom-full" : "top-full"
         }`}
       >

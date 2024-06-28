@@ -8,14 +8,25 @@ export const products = [
     sellerLocation: "NL",
     incl: 'Incl. Watch and papers',
     image:
-      "https://img.chrono24.com/images/uhren/34804920-u50m8ca4w9n6n4copc0fqt6i-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-ue8qhroamfnu0weib393i2r5-ExtraLarge.jpg",
     dateAdded: '2024-06-25',
     popularity: 1,
     relevance: 2,
+    brand:'Omega',
+    collection:'Seamaster DeVille',
     box: "Incl. Watch and papers",
     year: 1992,
     material : "18k Gold",
-    condition: "Used"
+    condition: "New",
+    images:[
+      "https://img.chrono24.com/images/uhren/25494614-ue8qhroamfnu0weib393i2r5-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-mbgvvvfrkthe24x764eo5grl-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-k13kc57hkzlyr68fko07yuya-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-ftmt0zngn6114f1wa4hf8q1l-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-t8ttxay0quo2kgraprm3ftm1-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-46ni8jd7ctpshewj0ivguuru-ExtraLarge.jpg",
+      "https://img.chrono24.com/images/uhren/25494614-v46kwzhr4zgmxccf5h2zsxu5-ExtraLarge.jpg"
+    ]
 
   },
 
@@ -152,6 +163,56 @@ export const products = [
 
 export const allWatches = {
   omega:{
+    speedmaster:{
+        image:'https://cdn2.chrono24.com/images/topmodels/74-984eorvfjxmx240c0i4zlfhx-Main.png',
+        title:'Speedmaster',
+        link:'/collections/omega/speedmaster',
+        productsCount:10101
+      },
+      seamaster:{
+        image:'https://cdn2.chrono24.com/images/topmodels/66-z0iag46qamnxzkmi3q83tty6-Main.png',
+        title:'Seamaster',
+        link:'/collections/omega/seamaster',
+        productsCount:17266,          
+      },
+      constellation:{
+        image:'https://cdn2.chrono24.com/images/topmodels/60-pijv0kluyv6b3u1ro4fgsl64-Main.png',
+        title:'Constellation',
+        link:'/collections/omega/constellation',
+        productsCount:6882
+      },
+      deville:{
+        image:'https://cdn2.chrono24.com/images/topmodels/62-odsx1c7oobxkzr00n3w4dw3c-Main.png',
+        title:'De Ville',
+        link:'/collections/omega/deville',
+        productsCount:6272
+      },
+      geneve:{
+        image:'https://cdn2.chrono24.com/images/topmodels/1082-g237gqw8h4iz3xkohpius9wk-Main.png',
+        title:'Geneve',
+        link:'/collections/omega/geneve',
+        productsCount:1113
+      },
+      seamasterPlanetOcean:{
+        image:'https://cdn2.chrono24.com/images/topmodels/65-xmhcbxg83eszkue44946l59c-Main.png',
+        title:'Seamaster Planet',
+        link:'/collections/omega/seamaster-planet-ocean',
+        productsCount:2089 
+      },
+      speedmaster0:{
+        image:'https://cdn2.chrono24.com/images/topmodels/74-984eorvfjxmx240c0i4zlfhx-Main.png',
+        title:'Speedmaster',
+        link:'/collections/omega/speedmaster',
+        productsCount:10101
+      },
+      seamaster0:{
+        image:'https://cdn2.chrono24.com/images/topmodels/66-z0iag46qamnxzkmi3q83tty6-Main.png',
+        title:'Seamaster',
+        link:'/collections/omega/seamaster',
+        productsCount:17266,          
+      },
+  },
+  seamaster:{
     speedmaster:{
         image:'https://cdn2.chrono24.com/images/topmodels/74-984eorvfjxmx240c0i4zlfhx-Main.png',
         title:'Speedmaster',

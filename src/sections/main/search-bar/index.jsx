@@ -1,4 +1,4 @@
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import Bar from "./bar";
 
 const SearchBar = () => {
