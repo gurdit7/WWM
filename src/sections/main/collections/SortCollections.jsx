@@ -1,5 +1,5 @@
 
-import Container from "@/components/ui/container/Container"
+import Container from "@/components/ui/container/container"
 import SortedProductList from "./SortedProductList"
 
 const SortCollections = () => {

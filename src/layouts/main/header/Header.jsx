@@ -1,7 +1,7 @@
 'use client';
-import Container from "@/components/ui/container/Container";
-import Text from "@/components/ui/text/Text";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Container from "@/components/ui/container/container";
+import Text from "@/components/ui/text/text";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import SearchIconButton from "@/sections/main/search-bar/SearchIconButton";
 import Link from "next/link";
 import IconUser from "../../../../public/icons/IconUser";

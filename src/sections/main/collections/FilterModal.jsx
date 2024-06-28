@@ -1,13 +1,12 @@
 "use client";
 import Switch from "@/components/ui/switch/Switch";
-import Text from "@/components/ui/text/Text";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Text from "@/components/ui/text/text";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import IconFilter from "../../../../public/icons/IconFilter";
 import { useState } from "react";
-
 const FilterModal = () => {
   const [filter, setFilter] = useState({});
-  const [save, setSave] = useState(false);
+  const [save, setSave] = useState(false);  
   const values = [
     "Seamaster",
     "Holland",
@@ -18,9 +17,9 @@ const FilterModal = () => {
     "Gold capped",
     "32mm",
   ];
-  const getSave = (e)=>{
+  const getSave = (e) => {
     setSave(e.target.checked);
-  }
+  };
   const getFilter = (item) => {
     if (filter[item]) {
       setFilter((prev) => ({ ...prev, [item]: false }));
@@ -60,8 +59,9 @@ const FilterModal = () => {
       </Wrapper>
       <Wrapper className="flex-1 flex items-center gap-x-[10px]">
         <Text className="!text-sm !leading-[19.6px] !font-medium"> Save</Text>
-        <Switch onChange={getSave}  />
+        <Switch onChange={getSave} />
       </Wrapper>
+
     </Wrapper>
   );
 };

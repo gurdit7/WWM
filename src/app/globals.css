@@ -15,7 +15,9 @@
 .reviews .flickity-slider{
     @apply space-x-2;
 }
-
+.product-thumbs-images-slider .flickity-slider{
+    @apply space-x-2;
+}
 button.flickity-button {
     position: absolute;
     top: 50%;
@@ -31,4 +33,7 @@ button.flickity-button.flickity-prev-next-button.previous {
 
 button.flickity-button.flickity-prev-next-button.next {
     right: 0;
+}
+.scroll-bar-hide::-webkit-scrollbar {
+width: 0px;
 }

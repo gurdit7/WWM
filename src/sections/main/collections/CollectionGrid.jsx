@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "@/components/ui/container/Container";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Container from "@/components/ui/container/container";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import ProductGridCard from "../products/ProductGridCard";
 import useTheme from "@/contexts/theme/ThemeContext";
 

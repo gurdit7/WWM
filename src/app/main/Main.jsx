@@ -1,6 +1,6 @@
 "use client";
 import useTheme from "@/contexts/theme/ThemeContext";
-import Footer from "@/layouts/main/footer/Footer";
+import Footer from "@/layouts/main/footer/footer";
 import Header from "@/layouts/main/header/Header";
 
 const Main = ({ children }) => {

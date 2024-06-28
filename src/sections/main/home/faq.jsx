@@ -1,7 +1,7 @@
 import { faqs } from '@/assets/data/faq'
-import Accordions from '@/components/accordion/Accordions'
-import H3 from '@/components/ui/headings/H3'
-import Wrapper from '@/components/ui/wrapper/Wrapper'
+import Accordions from '@/components/accordion/accordions'
+import H3 from '@/components/ui/headings/h3'
+import Wrapper from '@/components/ui/wrapper/wrapper'
 import React from 'react'
 
 const FAQ = () => {

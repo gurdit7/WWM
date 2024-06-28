@@ -1,5 +1,5 @@
-import Container from "@/components/ui/container/Container";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Container from "@/components/ui/container/container";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import FilterModal from "./FilterModal";
 
 const FilterBar = () => {

@@ -1,0 +1,3 @@
+.border-child-top > div + div{
+    @apply border-t border-light-50;
+}

@@ -1,6 +1,6 @@
 'use client';
 import Input from "@/components/form/input";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import IconSearch from "../../../../public/icons/IconSearch";
 import { useState } from "react";
 import ResultItem from "./result-item";

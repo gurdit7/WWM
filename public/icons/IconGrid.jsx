@@ -1,12 +1,54 @@
-const IconGrid = ({ className, onClick }) => {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg"
-            onClick={onClick}
-            className={className}
-            height="42px"
-            viewBox="0 -960 960 960"
-            width="42px"
-            fill="#000"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z" /></svg>
-    )
-}
-export default IconGrid
+const IconGrid = ({ className, color }) => {
+  return (
+    <svg
+      width="60"
+      height="59"
+      viewBox="0 0 60 59"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <rect
+        x="3"
+        y="3"
+        width="22"
+        height="22"
+        rx="4"
+        className={color}
+        strokeOpacity="0.866667"
+        strokeWidth="5"
+      />
+      <rect
+        x="3"
+        y="34"
+        width="22"
+        height="22"
+        rx="4"
+        className={color}
+        strokeOpacity="0.866667"
+        strokeWidth="5"
+      />
+      <rect
+        x="35"
+        y="3"
+        width="22"
+        height="22"
+        rx="4"
+        className={color}
+        strokeOpacity="0.866667"
+        strokeWidth="5"
+      />
+      <rect
+        x="35"
+        y="34"
+        width="22"
+        height="22"
+        rx="4"
+        className={color}
+        strokeOpacity="0.866667"
+        strokeWidth="5"
+      />
+    </svg>
+  );
+};
+export default IconGrid;

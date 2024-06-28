@@ -1,9 +1,9 @@
 import H2 from "@/components/ui/headings/H2";
-import Text from "@/components/ui/text/Text";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Text from "@/components/ui/text/text";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import Link from "next/link";
 import SearchBar from "../search-bar";
-import Container from "@/components/ui/container/Container";
+import Container from "@/components/ui/container/container";
 
 const Search = () => {
   const searchTags = ["Rolex", "Gold", "34mm", "Europe", "Gold capped", "32mm"];

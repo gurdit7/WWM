@@ -1,7 +1,7 @@
 import { products } from "@/assets/data/products";
 import ImageWrapper from "@/components/ui/image/image-wrapper";
-import Text from "@/components/ui/text/Text";
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+import Text from "@/components/ui/text/text";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import Image from "next/image";
 import Link from "next/link";
 

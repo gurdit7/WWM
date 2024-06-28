@@ -26,4 +26,4 @@ const H4 = ({ as, children, className }) => {
   )
 }
 
-export default H4
+export default H4;

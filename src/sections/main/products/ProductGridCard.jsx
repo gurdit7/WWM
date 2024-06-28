@@ -1,24 +1,34 @@
-import Wrapper from "@/components/ui/wrapper/Wrapper";
+"use client";
+import Wrapper from "@/components/ui/wrapper/wrapper";
 import Image from "next/image";
 import React from "react";
 import ProductBadge from "./ProductBadge";
-import H3 from "@/components/ui/headings/H3";
-import Text from "@/components/ui/text/Text";
+import H3 from "@/components/ui/headings/h3";
+import Text from "@/components/ui/text/text";
 import WishlistButton from "../wishlist/wishlist-button";
 import ProductPrice from "./ProductPrice";
 import H6 from "@/components/ui/headings/H6";
 import Link from "next/link";
 import Button from "@/components/form/button";
+import useTheme from "@/contexts/theme/ThemeContext";
 const ProductGridCard = ({ item, quickView }) => {
+  const { setQuickViewProduct } = useTheme();
+  const openPopup = () => {
+    setQuickViewProduct(item);
+  };
   return (
     <Wrapper
       className={`${
-        quickView ? "p-[6px] border border-light-150 rounded-[10px] w-full" : " max-w-[265px]"
+        quickView
+          ? "p-[6px] border border-light-150 rounded-[10px] w-full"
+          : " max-w-[265px]"
       }  w-full relative `}
     >
       <Wrapper className="w-full pt-[100%] relative">
         <Image
-          className={`absolute w-full h-full top-0 left-0 object-cover rounded-[10px] ${quickView ? "" : " border border-light-50"}`}
+          className={`absolute w-full h-full top-0 left-0 object-cover rounded-[10px] ${
+            quickView ? "" : " border border-light-50"
+          }`}
           src={item.image}
           width={265}
           height={265}
@@ -48,21 +58,22 @@ const ProductGridCard = ({ item, quickView }) => {
         >
           <Wrapper>
             {quickView && (
-                <H6 className="!font-semibold max-w-16 mb-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
-                  <Image
-                    src={`/countries-flags/${item.sellerLocation.toLowerCase()}.svg`}
-                    width={18.02}
-                    height={11.99}
-                    alt={item.sellerLocation}
-                    className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
-                  />
-                  {item.sellerLocation}
-                </H6>
+              <H6 className="!font-semibold max-w-16 mb-2 !leading-[24px] py-[2px] flex gap-2 px-[10px] items-center border border-light-50 rounded-[6px]">
+                <Image
+                  src={`/countries-flags/${item.sellerLocation.toLowerCase()}.svg`}
+                  width={18.02}
+                  height={11.99}
+                  alt={item.sellerLocation}
+                  className="rounded-[1.5px] w-[18.02px] h-[11.99px] object-cover"
+                />
+                {item.sellerLocation}
+              </H6>
             )}
             <ProductPrice item={item} />
           </Wrapper>
           {quickView ? (
             <Button
+              event={openPopup}
               btnType="solid"
               type="button"
               color="black"
