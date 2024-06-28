@@ -1,8 +1,7 @@
 "use client";
 import useTheme from "@/contexts/theme/ThemeContext";
-import Footer from "@/layouts/main/footer/footer";
+import Footer from "@/layouts/main/footer/Footer";
 import Header from "@/layouts/main/header/Header";
-import { useEffect } from "react";
 
 const Main = ({ children }) => {
   const { hideHeader, hideFooter } = useTheme();
