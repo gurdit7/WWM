@@ -11,7 +11,7 @@ const CollectionGrid = () => {
 
   return (
     <Container>
-      <Wrapper className="gap-2 grid grid-cols-4 mt-6">
+      <Wrapper className="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6">
         {sortedProducts.map((item, i) => (
           <ProductGridCard quickView={true} item={item} key={i} />
         ))}

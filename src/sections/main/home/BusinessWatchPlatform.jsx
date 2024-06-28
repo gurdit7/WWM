@@ -13,6 +13,7 @@ import { businessMarketing } from "@/assets/data/business-marketing"
 
 const BusinessWatchPlatform = () => {
     const [selectedTab, setSelectedTab] = useState(0)
+
     return (
 
         <Container className="py-[35px] md:py-[100px]">

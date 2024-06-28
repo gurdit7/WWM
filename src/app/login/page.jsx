@@ -18,7 +18,6 @@ import Wrapper from "@/components/ui/wrapper/wrapper"
 import Image from "next/image"
 import LoginForm from "@/sections/LoginForm"
 
-
 const Login = () => {
 
     return (

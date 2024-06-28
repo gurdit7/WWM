@@ -5,9 +5,10 @@ import Wrapper from '@/components/ui/wrapper/wrapper'
 import React from 'react'
 import JoinOurPlatformImage from '../../../../public/image/join-our-platform.png'
 import Image from 'next/image'
+
 const JoinOurPlatform = () => {
   return (
-    <Wrapper className='max-w-[1216px] mx-auto px-[100px]'>        
+    <Wrapper className='max-w-[1216px] mx-auto px-[16px] md:px-[100px]'>        
     <Wrapper className='bg-light-150 rounded-[10px] overflow-hidden min-h-[359px] flex items-center justify-between my-[65px]'>
         <Wrapper className='py-16 ml-[65px] max-w-[387px]'>
             <H2 className='text-center'>
