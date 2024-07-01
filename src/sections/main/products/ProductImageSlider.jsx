@@ -4,8 +4,12 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Flickity from "react-flickity-component";
 import ProductBadge from "./ProductBadge";
+import WishlistButton from "../wishlist/wishlist-button";
 
 const ProductImageSlider = ({ images }) => {
+
+
+
   const [productImages, setProductImages] = useState([]);
   const flickityRef = useRef(null);
   const flickityThumbRef = useRef(null);
@@ -41,10 +45,15 @@ const ProductImageSlider = ({ images }) => {
     asNavFor: ".product-main-images-slider",
   };
 
+  console.log("productImages",productImages)
+
+
   return (
     <>
       <Wrapper className="relative">
-        <ProductBadge>Sponsored </ProductBadge>
+        <ProductBadge className="!top-[18px]">Sponsored</ProductBadge>
+        <WishlistButton className="!absolute md:hidden right-[18px] top-[18px]" />
+
         <Flickity
           flickityRef={(c) => (flickityRef.current = c)}
           className={"carousel product-main-images-slider"}

@@ -1,0 +1,8 @@
+/* Your custom CSS file */
+.border-child-right > div:not(:last-child) {
+    @apply border-r border-light-50  pr-[45px];
+}
+
+.border-child-top > div + div{
+    @apply border-t border-light-50;
+}
