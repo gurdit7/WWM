@@ -27,22 +27,34 @@ const SubCollections = () => {
     prevNextButtons: false,
     pageDots: false,
   };
+
+  const link = links[3]?.replace("-","_");
   return (
     <Container>
-        <H1 as='tag' className='capitalize my-6'>{value}</H1>
-        <Flickity
-            className={"carousel subcollections"}
-            elementType={"div"}
-            options={flickityOptions}
-            disableImagesLoaded={false}
-            reloadOnUpdate
-            static
-          >
-      {Object.keys(allWatches).map((item, i) => ( item == value && (
-      Object.values(allWatches[item]).map((values, i ) => (
-      <SubCollectionsCard key={i} item={values} mainKey={key} />
-      )) ) ))}
-            </Flickity>
+      <H1 as="tag" className="capitalize my-6">
+        {value}
+      </H1>
+      <Flickity
+        className={"carousel subcollections"}
+        elementType={"div"}
+        options={flickityOptions}
+        disableImagesLoaded={false}
+        reloadOnUpdate
+        static
+      >
+        {links.length < 4 &&
+          Object.keys(allWatches).map(
+            (item, i) =>
+              item == value &&
+              Object.values(allWatches[item]).map((values, i) => (
+                <SubCollectionsCard key={i} item={values} mainKey={key} />
+              ))
+          )}
+        {links.length === 4 &&
+          Object.values(allWatches[links[2]][link].children).map((values, i) => (
+            <SubCollectionsCard key={i} item={values} mainKey={key} />
+          ))}
+      </Flickity>
     </Container>
   );
 };

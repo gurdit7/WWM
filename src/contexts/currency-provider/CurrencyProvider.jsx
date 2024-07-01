@@ -7,7 +7,8 @@ export default function useCurrency() {
 
 export function CurrencyProvider({ children }) {
    const [selectedCountry, setCountry] = useState('NL');
-   const [currencyCode, setCurrencyCode] = useState('NL');
+   const [currencyCode, setCurrencyCode] = useState('EUR');
+   const [currencyPrice, setCurrencyCodePrice] = useState(1);
    const getCurrency = (code,currencyCode) =>{
     setCountry(code)
     setCurrencyCode(currencyCode)
@@ -15,7 +16,9 @@ export function CurrencyProvider({ children }) {
   const value = {
     selectedCountry,
     currencyCode,
-    getCurrency
+    getCurrency,
+    currencyPrice,
+    setCurrencyCodePrice
   };
   return <CurrencyContext.Provider value={value}>{children}</CurrencyContext.Provider>;
 }

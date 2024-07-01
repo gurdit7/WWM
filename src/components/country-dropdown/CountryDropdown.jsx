@@ -1,21 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Wrapper from "../ui/wrapper/wrapper";
 import Image from "next/image";
 import useCurrency from "@/contexts/currency-provider/CurrencyProvider";
-import { Countries } from "@/assets/data/countries";
-
+import { Countries, CountriesCurrency } from "@/assets/data/countries";
 
 const CountryDropdown = ({ className, footer }) => {
-  const { selectedCountry, getCurrency } = useCurrency();
+  const { selectedCountry, getCurrency, setCurrencyCodePrice } = useCurrency();
   const [selectCountry, setSelectedCountry] = useState(selectedCountry);
   const [open, setOpen] = useState(false);
   const setCountry = (code, currencyCode) => {
     setSelectedCountry(code);
     getCurrency(code, currencyCode);
     setOpen(false);
+    fetch(`https://api.exchangerate-api.com/v4/latest/EUR`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        const rates = res.rates[currencyCode];
+        setCurrencyCodePrice(rates);
+      });
   };
-  return (
+   return (
     <Wrapper className="relative">
       <button
         onClick={() => setOpen((s) => !s)}
@@ -45,7 +52,7 @@ const CountryDropdown = ({ className, footer }) => {
       <Wrapper
         className={`${
           open ? "max-h-[200px]" : "max-h-[0px]"
-        } transtion duration-500 scroll-bar-hide left-0 absolute overflow-y-auto bg-white ${
+        } transtion duration-500 scroll-bar-hide shadow-9xl z-10 w-full left-0 absolute overflow-y-auto bg-white ${
           footer ? "bottom-full" : "top-full"
         }`}
       >

@@ -12,7 +12,12 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'cdn2.chrono24.com',
           pathname: '**',
-        }        
+        },
+        {
+          protocol: 'https',
+          hostname: 'example.com',
+          pathname: '**',
+        }         
       ],
     } 
   }

@@ -1,18 +1,22 @@
+'use client';
 import { products } from "@/assets/data/products";
-import ImageWrapper from "@/components/ui/image/image-wrapper";
 import Text from "@/components/ui/text/text";
 import Wrapper from "@/components/ui/wrapper/wrapper";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const ResultItem = ({ query }) => {
-  const items = [
-    "Omega Speedmaster",
-    "Omega Seedmaster De Ville",
-    "Omega Seedmaster",
-    "Omega Speedmaster",
-  ];
-
+  const [items, setItems] = useState([]);
+    useEffect(()=>{
+      const array = [];
+      products.map((item)=>{
+        if(!array.includes(item.title)){
+          array.push(item.title)
+        }
+      })
+      setItems(array);
+    },[products])
   const itemsString = items.toString();
   return (
     <Wrapper
@@ -25,7 +29,7 @@ const ResultItem = ({ query }) => {
           Search result
         </label>
         {query ? (
-          <ul className="mt-3">
+          <ul className="mt-3 max-h-[342px] overflow-y-auto scroll-bar-hide">
             {items.map(
               (item, i) =>
                 item.includes(query) && (
@@ -49,7 +53,7 @@ const ResultItem = ({ query }) => {
           Products
         </label>
         {query ? (
-          <ul className="mt-3 flex flex-col gap-2">
+          <ul className="mt-3 flex flex-col gap-2 max-h-[342px] overflow-y-auto scroll-bar-hide">
             {products.map(
               (item, i) =>
                 item.title.includes(query) && (
@@ -59,22 +63,33 @@ const ResultItem = ({ query }) => {
                   >
                     <Wrapper>
                       <Image
-                      className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] object-cover rounded-[5px]"
+                        className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] object-cover rounded-[5px]"
                         src={item.image}
                         width={50}
                         height={50}
                         alt={item.title + "Main Image"}
                       />
                     </Wrapper>
-                    <Wrapper className='w-full'>
-                      <Text className='!leading-[24px] !font-semibold -tracking-[0.14px]'>{item.title}</Text>
-                      <Text className='!leading-[24px] '>{item.referenceNumber}</Text>
+                    <Wrapper className="w-full">
+                      <Text className="!leading-[24px] !font-semibold -tracking-[0.14px]">
+                        {item.title}
+                      </Text>
+                      <Text className="!leading-[24px] ">
+                        {item.referenceNumber}
+                      </Text>
                     </Wrapper>
                     <Wrapper>
-                    <Text className='!leading-[24px] text-dark-100 whitespace-nowrap text-right'>{item.price}</Text>
-                    <Text className='!leading-[24px] text-dark-100 text-right'>{item.taxType}</Text>
+                      <Text className="!leading-[24px] text-dark-100 whitespace-nowrap text-right">
+                        {item.price}
+                      </Text>
+                      <Text className="!leading-[24px] text-dark-100 text-right">
+                        {item.taxType}
+                      </Text>
                     </Wrapper>
-                    <Link href={item.url} className="absolute top-0 left-0 w-full h-full" />
+                    <Link
+                      href={item.url}
+                      className="absolute top-0 left-0 w-full h-full"
+                    />
                   </li>
                 )
             )}
@@ -82,7 +97,11 @@ const ResultItem = ({ query }) => {
         ) : (
           <Text>Not Found</Text>
         )}
-
+        {products.map((item, i) => {
+          if (!item.title.includes(query) && i === 0) {
+            return <Text>Not Found</Text>;
+          }
+        })}
       </Wrapper>
     </Wrapper>
   );
