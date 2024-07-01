@@ -1,6 +1,6 @@
+'use client';
 import Search from "../Search";
-import React from 'react'
-
+import React, { useEffect } from 'react'
 import FeaturedProducts from "../FeaturedProducts";
 import { products } from "@/assets/data/products";
 import JoinOurPlatform from "../JoinOurPlatform";
@@ -11,8 +11,14 @@ import Container from "@/components/ui/container/container";
 import Wrapper from '@/components/ui/wrapper/wrapper'
 import FeaturedBrands from '../FeaturedBrands'
 import BusinessWatchPlatform from '../BusinessWatchPlatform'
+import useTheme from "@/contexts/theme/ThemeContext";
 
 const index = () => {
+  const {setHideHeader, setHideFooter} = useTheme();
+  useEffect(()=>{
+      setHideHeader(false);
+      setHideFooter(false);
+  },[])
   return (
     <Wrapper className="template-index">
       <Search />
