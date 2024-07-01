@@ -23,7 +23,7 @@ const ProductPrice = ({ item, className }) => {
             {formatPrice('US', (item?.price * currencyPrice).toFixed(3) , (currencyCode || 'EUR' ))}
           </Text>
         )}
-        {item.taxType && <H6>{item.taxType}</H6>}
+         {item.taxType && <H6>{item.taxType}</H6>}
       </Wrapper>
     </>
   );

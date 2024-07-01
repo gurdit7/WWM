@@ -10,16 +10,19 @@ import Image from "next/image"
 import LinkComponent from "@/components/ui/Link"
 import IconArrowRight from "../../../../public/icons/IconArrowRight"
 import './style.css';
+import ProductAccordions from "@/components/accordion/productAccordions"
+import { productDetailsfaq } from "@/assets/data/productDetailsfaq"
+
 
 
 const ProductDetails = ({ product }) => {
     return (
         <Wrapper className="flex flex-col w-full max-w-[532px] md:max-w-[408px] mx-auto md:mx-0 gap-[22px] py-[16px] md:py-[18px] md:px-[32px]">
             <Wrapper className="flex flex-col gap-y-[22px]">
-                <Wrapper className="flex items-center gap-x-6 justify-between">
+                <Wrapper className="flex items-center px-[12px] gap-x-6 justify-between">
                     <Wrapper className="flex flex-col gap-y-[6px]">
                         <H3
-                        className=" !text-[22px]  !leading-[29.08px] !font-semibold md:!text-[19px] md:!leading-[25.88px] md:!font-medium">
+                            className=" !text-[22px]  !leading-[29.08px] !font-semibold md:!text-[19px] md:!leading-[25.88px] md:!font-medium">
                             {product.title}
                         </H3>
                         <H3 className="!text-[17px] !leading-[23.15px] !font-medium">
@@ -30,7 +33,7 @@ const ProductDetails = ({ product }) => {
                         <WishlistButton />
                     </Wrapper>
                 </Wrapper>
-                <Wrapper className="flex items-center   border-child-right   justify-between">
+                <Wrapper className="flex items-center px-[12px]   border-child-right   justify-between">
                     <Wrapper className="flex flex-col gap-y-[2px]">
                         <Text className="text-[12px] font-normal text-[#2A2C29] leading-[24px] text-left" > Year</Text>
                         <Text className="text-[16px] font-medium text-[#2A2C29] leading-[24px]" >{product.year || '-'}</Text>
@@ -46,7 +49,7 @@ const ProductDetails = ({ product }) => {
                     </Wrapper>
 
                 </Wrapper>
-                <Wrapper className="flex justify-between my-[2px] items-center">
+                <Wrapper className="flex justify-between my-[2px] px-[12px] items-center">
                     <ProductPrice item={product} />
                     <Text className="!text-[13px] !leading-[18.2px] text-[#2A2C29]">
                         Ex. Shipping
@@ -83,7 +86,7 @@ const ProductDetails = ({ product }) => {
                         </Wrapper>
                         <Wrapper className="flex items-center">
                             <H6
-                                as="tag"
+
                                 className="border-b border-solid !text-[#000] border-[#000]"> 1200 watches |</H6>
                             <H6
                                 as="tag"
@@ -93,127 +96,130 @@ const ProductDetails = ({ product }) => {
                     </Wrapper>
                 </Wrapper>
             </Wrapper>
-            <Wrapper className="flex flex-col gap-[14px] pt-[14px] pb-[33px] h-full max-h-[125px] md:max-h-full overflow-y-auto px-[17px] border border-[#EEEDEC] rounded-md">
+            {/* <Wrapper className="flex flex-col gap-[14px] pt-[14px] pb-[33px] h-full max-h-[125px] md:max-h-full overflow-y-auto px-[17px] border border-[#EEEDEC] rounded-md">
                 <Wrapper className="flex items-center gap-x-[10px] justify-between">
                     <Text className="text-[#000] text-[13px] !leading-[17.71px] font-semibold">All info</Text>
-                    <IconArrowRight className="h-[18px] w-[18px]"/>
+                    <IconArrowRight className="h-[18px] w-[18px]" />
                 </Wrapper>
                 <Wrapper className="border-child-top">
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                        Brand
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                        {product.title}
-                    </Text>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Brand
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            {product.title}
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Refrerence
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            {product.referenceNumber}
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Collection
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            Seamaster DeVille
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Year
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            {product.year}
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Condition
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            {product.condition}
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Location of watch
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            {product.sellerLocation}
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Certificates
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            Watch and papers
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Material
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            {product.material}
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Dial color
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            Champange
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Case Size (mm)
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            34 mm
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Serviced?
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            Yes
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Clasp
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            Chrome
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            Band material
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            Leather
+                        </Text>
+                    </Wrapper>
+                    <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
+                        <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
+                            ListingID
+                        </Text>
+                        <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
+                            456789324
+                        </Text>
+                    </Wrapper>
+
                 </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Refrerence
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                        {product.referenceNumber}
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Collection
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    Seamaster DeVille
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Year
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                        {product.year}
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Condition
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                        {product.condition}
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Location of watch
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                        {product.sellerLocation}
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Certificates
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    Watch and papers
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Material
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                        {product.material}
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Dial color
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    Champange
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Case Size (mm)
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    34 mm
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Serviced?
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                      Yes
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Clasp
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    Chrome
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    Band material
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    Leather
-                    </Text>
-                </Wrapper>
-                <Wrapper className="grid grid-cols-2 gap-x-[24px] py-[4px] items-start ">
-                    <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
-                    ListingID
-                    </Text>
-                    <Text className="text-[13px]  font-medium text-[#2A2C29] !leading-[24px]">
-                    456789324
-                    </Text>
-                </Wrapper>
-                
-                </Wrapper>
-            </Wrapper>
+            </Wrapper> */}
+
+
+            <ProductAccordions productDetailsfaq={productDetailsfaq} />
         </Wrapper>
 
     )
