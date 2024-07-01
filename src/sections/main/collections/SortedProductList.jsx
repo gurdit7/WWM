@@ -9,6 +9,7 @@ import H6 from "@/components/ui/headings/H6";
 import ProductCard from "./ProductCard";
 import WishlistButton from "../wishlist/wishlist-button";
 import useTheme from "@/contexts/theme/ThemeContext";
+import ProductPrice from '../products/ProductPrice';
 
 const SortedProductList = () => {
   const { sortedProducts } = useTheme();
@@ -83,10 +84,7 @@ const SortedProductList = () => {
             ))}
           </Wrapper>
           <Wrapper className="flex flex-col gap-1">
-            <H4 className="font-semibold" as="tag">
-              € {product.price}
-            </H4>
-            <H6 className="font-normal">{product.taxType}</H6>
+          <ProductPrice className='flex-col !items-start !gap-0' item={product} />
           </Wrapper>
         </Wrapper>
       </Wrapper>

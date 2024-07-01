@@ -6,7 +6,7 @@ export const businessWatchPlatform = [
         logo: <IconBell />,
         description: "With My Collection service you can manage your own collection of watches, see similar listings, and track its value",
         image:
-            "https://img.chrono24.com/images/uhren/34804920-u50m8ca4w9n6n4copc0fqt6i-ExtraLarge.jpg",
+            "/image/B2B.png",
     },
     
     {
