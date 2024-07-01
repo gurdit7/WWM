@@ -3,10 +3,6 @@
 "use client";
 
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb"
-import BuyButtons from "../BuyButtons"
-import useTheme from "@/contexts/theme/ThemeContext"
-import QuickView from "../../quick-view/QuickView"
-import ProductGallary from "../ProductGallary";
 import { products } from "@/assets/data/products";
 import Wrapper from "@/components/ui/wrapper/wrapper";
 import ProductDetails from "../ProductDetails";
@@ -15,7 +11,6 @@ import Container from "@/components/ui/container/container";
 
 const index = () => {
 
-    const { quickViewProduct } = useTheme()
 
     return (
         <Container className="py-[16px]" >

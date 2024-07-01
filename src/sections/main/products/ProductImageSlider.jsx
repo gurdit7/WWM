@@ -45,9 +45,6 @@ const ProductImageSlider = ({ images }) => {
     asNavFor: ".product-main-images-slider",
   };
 
-  console.log("productImages",productImages)
-
-
   return (
     <>
       <Wrapper className="relative">
