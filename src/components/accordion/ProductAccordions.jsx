@@ -33,9 +33,9 @@ const ProductAccordions = ({ productDetailsfaq }) => {
 const Accordion = ({ index, openIndex, headerInfo, details, toggleAccordion }) => {
 
 return (
-  <div className={`flex flex-col gap-[14px] pt-[14px] pb-[33px] h-full max-h-[125px] mb-2  md:max-h-full overflow-y-auto px-[17px] border border-[#EEEDEC] rounded-md`}>
+  <div className={`flex flex-col gap-[14px] pt-[14px] pb-[33px] h-full  overflow-y-auto px-[17px] border border-[#EEEDEC] rounded-md`}>
     <div
-      className="flex items-center gap-x-[10px] cursor-pointer  transition duration-500 justify-between"
+      className="flex items-center gap-x-[10px] cursor-pointer  justify-between"
       onClick={() => toggleAccordion(index)}
     >
       <Text className="text-[#000] text-[13px] !leading-[17.71px] font-semibold">{headerInfo.label}</Text>
@@ -44,11 +44,11 @@ return (
           } transition-all duration-500`}
       />
     </div>
-    {index === openIndex && (
-      <Wrapper className={`border-child-top`}>
+    {/* {index === openIndex && ( */}
+      <Wrapper className={`border-child-top transition-all duration-500 overflow-hidden  ${index === openIndex ? 'max-h-[1000px]' : 'max-h-0'}`}>
         {details.map((detail, index) => (
           <Wrapper
-            className={`grid   grid-cols-2 gap-x-[24px] py-[4px] items-start`}
+            className={`grid grid-cols-2 gap-x-[24px] py-[4px] items-start`}
             key={index}>
             <Text className="text-[13px]  font-normal text-[#2A2C29] !leading-[24px]">
               {detail.label}
@@ -59,7 +59,7 @@ return (
           </Wrapper>
         ))}
       </Wrapper>
-    )}
+    {/* )} */}
   </div>
 );
 };
