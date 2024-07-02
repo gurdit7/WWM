@@ -1,26 +1,27 @@
 "use client";
-import './style.css';
+import "./style.css";
 import Wrapper from "@/components/ui/wrapper/wrapper";
 import Text from "@/components/ui/text/text";
 import Image from "next/image";
 import H3 from "@/components/ui/headings/h3";
-import H4 from "@/components/ui/headings/H4";
-import H6 from "@/components/ui/headings/H6";
+import H4 from "@/components/ui/headings/h4";
+import H6 from "@/components/ui/headings/h6";
 import ProductCard from "./ProductCard";
 import WishlistButton from "../wishlist/wishlist-button";
 import useTheme from "@/contexts/theme/ThemeContext";
-import ProductPrice from '../products/ProductPrice';
+import ProductPrice from "../products/ProductPrice";
+import Link from "next/link";
 
 const SortedProductList = () => {
   const { sortedProducts } = useTheme();
-
+  const items = ["Box", "Year", "Material", "Condition"];
   return (
     sortedProducts &&
     sortedProducts.length > 0 &&
     sortedProducts.map((product, i) => (
       <Wrapper
         key={i}
-        className="rounded-[6px] p-[6px] shadow-9xl flex flex-col md:flex-row gap-x-[18px] items-center"
+        className="rounded-[6px] relative p-[6px] shadow-9xl flex flex-col md:flex-row gap-x-[18px] items-center"
       >
         <ProductCard item={product} />
         <Wrapper className="flex flex-col gap-y-3 w-full">
@@ -43,14 +44,21 @@ const SortedProductList = () => {
                 {product.sellerLocation}
               </H6>
               <WishlistButton className="!bg-[#F4F4F3]" />
+              <Link
+                href={product?.url || "/products"}
+                className="absolute top-0 left-0 w-full h-full"
+              />
             </Wrapper>
           </Wrapper>
           <Wrapper className="flex flex-col md:flex-row justify-between gap-y-3 gap-x-[16px] md:gap-x-[36px] items-center w-full">
-            {["box", "box", "box"].map((item, idx) => (
-              <Wrapper key={idx} className="flex flex-col w-full border-child-top">
+            {[0, 1, 2].map((idx) => (
+              <Wrapper
+                key={idx}
+                className="flex flex-col w-full border-child-top"
+              >
                 <Wrapper className="flex items-center gap-x-6 justify-between pr-[18px] py-[2px]">
                   <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {item}
+                    {items[0]}
                   </Text>
                   <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
                     {product.box}
@@ -58,33 +66,36 @@ const SortedProductList = () => {
                 </Wrapper>
                 <Wrapper className="flex items-center gap-x-6 justify-between pr-[18px] py-[2px]">
                   <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {item}
+                    {items[1]}
                   </Text>
                   <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {product.incl}
-                  </Text>
-                </Wrapper>
-                <Wrapper className="flex items-center gap-x-6 justify-between pr-[18px] py-[2px]">
-                  <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {item}
-                  </Text>
-                  <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {product.incl}
+                    {product.year}
                   </Text>
                 </Wrapper>
                 <Wrapper className="flex items-center gap-x-6 justify-between pr-[18px] py-[2px]">
                   <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {item}
+                    {items[2]}
                   </Text>
                   <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
-                    {product.incl}
+                    {product.material}
+                  </Text>
+                </Wrapper>
+                <Wrapper className="flex items-center gap-x-6 justify-between pr-[18px] py-[2px]">
+                  <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
+                    {items[3]}
+                  </Text>
+                  <Text className="text-[13px] leading-[24px] text-[#2A2C29] font-normal">
+                    {product.condition}
                   </Text>
                 </Wrapper>
               </Wrapper>
             ))}
           </Wrapper>
           <Wrapper className="flex flex-col gap-1">
-          <ProductPrice className='flex-col !items-start !gap-0' item={product} />
+            <ProductPrice
+              className="flex-col !items-start !gap-0"
+              item={product}
+            />
           </Wrapper>
         </Wrapper>
       </Wrapper>
@@ -93,4 +104,3 @@ const SortedProductList = () => {
 };
 
 export default SortedProductList;
- 

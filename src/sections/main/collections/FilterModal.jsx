@@ -61,7 +61,7 @@ const FilterModal = () => {
             </li>
           ))}
       </ul>
-      <Wrapper className=" hidden md:flex-1 md:flex items-center gap-x-[10px]">
+      <Wrapper className=" hidden md:flex-1 md:flex items-center gap-x-[10px] justify-end">
         <Text className="!text-sm !leading-[19.6px] !font-medium"> Save</Text>
         <Switch onChange={getSave} />
       </Wrapper>

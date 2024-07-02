@@ -7,7 +7,7 @@ import H3 from "@/components/ui/headings/h3";
 import Text from "@/components/ui/text/text";
 import WishlistButton from "../wishlist/wishlist-button";
 import ProductPrice from "./ProductPrice";
-import H6 from "@/components/ui/headings/H6";
+import H6 from "@/components/ui/headings/h6";
 import Link from "next/link";
 import Button from "@/components/form/button";
 import useTheme from "@/contexts/theme/ThemeContext";

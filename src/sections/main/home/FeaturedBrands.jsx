@@ -11,7 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { formatNumber } from "@/utils/format-number";
 
-const BrandComponent = ({ brand }) => (
+export const BrandComponent = ({ brand }) => (
   <div className="border border-[#F4F2F0] border-solid rounded-[10px]">
     <div className="flex justify-center items-center py-[30px] px-6">
       <Link
@@ -22,6 +22,7 @@ const BrandComponent = ({ brand }) => (
           src={brand.logoUrl}
           width={223.17}
           height={56.86}
+          className="block mx-auto"
           alt={brand.brandName}
         />
       </Link>
@@ -65,11 +66,11 @@ const FeaturedBrands = () => {
         ></LinkComponent>
       </Wrapper>
       <Wrapper className="flex items-start">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  items-start gap-2 w-full">
+        <Wrapper className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  items-start gap-2 w-full">
           {featuredBrands.map((brand, index) => (
             <BrandComponent key={index} brand={brand} />
           ))}
-        </div>
+        </Wrapper>
       </Wrapper>
     </Container>
   );

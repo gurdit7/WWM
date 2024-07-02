@@ -19,7 +19,7 @@ const Breadcrumb = () => {
             >
               All Watches
             </Link>
-            <IconArrowRight className="w-5 h-5 fill-dark-100" />
+        {links.length > 2 &&  <IconArrowRight className="w-5 h-5 fill-dark-100" /> }
           </li>
         )}
         {links.map((link, i) => (
