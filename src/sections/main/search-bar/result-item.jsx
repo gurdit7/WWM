@@ -11,12 +11,18 @@ const ResultItem = ({ query }) => {
     useEffect(()=>{
       const array = [];
       products.map((item)=>{
-        if(!array.includes(item.title)){
+        if(!array.includes(item.title) && item?.title?.includes(query)){
           array.push(item.title)
+        }
+        if(!array.includes(item.material) && item?.material?.includes(query)){
+          array.push(item.material)
+        }
+        if(!array.includes(item.case_diameter) && item?.case_diameter?.includes(query)){
+          array.push(item.case_diameter)
         }
       })
       setItems(array);
-    },[products])
+    },[products, query])
   const itemsString = items.toString();
   return (
     <Wrapper
@@ -32,11 +38,11 @@ const ResultItem = ({ query }) => {
           <ul className="mt-3 max-h-[342px] overflow-y-auto scroll-bar-hide">
             {items.map(
               (item, i) =>
-                item.includes(query) && (
+                item && item.includes(query) && (
                   <li
                     className="text-[#ADADAE] leading-[35.2px] text-base py-1 px-2 rounded-[6px] hover:bg-[#F4F4F3] transition-color cursor-pointer duration-300"
                     key={i}
-                  >
+                  >                           
                     <span className="text-dark-100">{query}</span>
                     <span>{item.split(query)[1]}</span>
                   </li>
@@ -56,7 +62,7 @@ const ResultItem = ({ query }) => {
           <ul className="mt-3 flex flex-col gap-2 max-h-[342px] overflow-y-auto scroll-bar-hide">
             {products.map(
               (item, i) =>
-                item.title.includes(query) && (
+               (item.material.includes(query) || item.title.includes(query) || item.condition.includes(query) || item?.case_diameter?.includes(query) ) && (
                   <li
                     className="bg-white py-[6px] relative pl-1 pr-[26px] w-full flex gap-4 rounded-[5px] cursor-pointer duration-300"
                     key={i}
@@ -97,11 +103,7 @@ const ResultItem = ({ query }) => {
         ) : (
           <Text>Not Found</Text>
         )}
-        {products.map((item, i) => {
-          if (!item.title.includes(query) && i === 0) {
-            return <Text>Not Found</Text>;
-          }
-        })}
+      {!itemsString.includes(query) && <Text>Not Found</Text>}
       </Wrapper>
     </Wrapper>
   );

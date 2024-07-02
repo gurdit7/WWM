@@ -8,9 +8,11 @@ import Wrapper from "@/components/ui/wrapper/wrapper";
 import Text from "@/components/ui/text/text";
 import useTheme from "@/contexts/theme/ThemeContext";
 import Container from "@/components/ui/container/container";
-import { products } from "@/assets/data/products";
+import { allWatches, products } from "@/assets/data/products";
+import { usePathname } from "next/navigation";
 
 const SortByFieldBar = () => {
+  const path = usePathname();
   const sortProducts = (products, criterion) => {
     switch (criterion) {
       case "popularity":
@@ -37,7 +39,14 @@ const SortByFieldBar = () => {
     sortCriterion,
   } = useTheme();
 
-  useEffect(() => {
+  useEffect(() => {   
+    const links = path.split("/");
+    const value = links[links.length - 1].replace("-","_");
+    const link = links[3]?.replace("-","_");
+    let products = allWatches[links[2]]?.products || [];
+    if(links.length === 4){
+      products = allWatches[links[2]][link]?.products || [];
+    }
     setSortedProducts(sortProducts(products, sortCriterion));
   }, [sortCriterion]);
 
@@ -71,7 +80,7 @@ const SortByFieldBar = () => {
       </Wrapper>
       </Wrapper>
       <Wrapper className='flex-1  flex justify-end'>
-      <Wrapper className="flex  items-center gap-x-[18px]">
+      <Wrapper className="flex  items-center gap-x-[18px] ">
         <Text className="text-[14px] hidden md:block leading-[21px] whitespace-nowrap font-medium text-[#000]">
           Sort By
         </Text>

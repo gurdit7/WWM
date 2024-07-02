@@ -1,5 +1,5 @@
 'use client';
-import H6 from "@/components/ui/headings/H6";
+import H6 from "@/components/ui/headings/h6";
 import Text from "@/components/ui/text/text";
 import Wrapper from "@/components/ui/wrapper/wrapper";
 import useCurrency from "@/contexts/currency-provider/CurrencyProvider";

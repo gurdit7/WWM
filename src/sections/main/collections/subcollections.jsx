@@ -28,7 +28,7 @@ const SubCollections = () => {
     pageDots: false,
   };
 
-  const link = links[3]?.replace("-","_");
+  const link = links[3]?.replace("-", "_");
   return (
     <Container>
       <H1 as="tag" className="capitalize my-6">
@@ -46,14 +46,19 @@ const SubCollections = () => {
           Object.keys(allWatches).map(
             (item, i) =>
               item == value &&
-              Object.values(allWatches[item]).map((values, i) => (
-                <SubCollectionsCard key={i} item={values} mainKey={key} />
-              ))
+              Object.values(allWatches[item]).map(
+                (values, i) =>
+                  !values?.length > 0 && (
+                    <SubCollectionsCard key={i} item={values} mainKey={key} />
+                  )
+              )
           )}
         {links.length === 4 &&
-          Object.values(allWatches[links[2]][link].children).map((values, i) => (
-            <SubCollectionsCard key={i} item={values} mainKey={key} />
-          ))}
+          Object.values(allWatches[links[2]][link].children).map(
+            (values, i) => (
+              <SubCollectionsCard key={i} item={values} mainKey={key} />
+            )
+          )}
       </Flickity>
     </Container>
   );
